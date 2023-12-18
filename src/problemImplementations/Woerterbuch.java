@@ -13,8 +13,6 @@ public class Woerterbuch {
         return germanSchilda.getOrDefault(key, "Not found");
     }
 
-
-
     public void setMeaningSchildaGerman(String schildaWord, String germanWord) {
         schildaGerman.put(schildaWord, germanWord);
         germanSchilda.put(germanWord, schildaWord);

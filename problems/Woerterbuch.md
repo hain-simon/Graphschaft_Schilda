@@ -25,3 +25,5 @@
 - Auch andersrum Erlaubt
 
 ## Was ist die Laufzeit?
+
+- Normalerweise O(1), kann in seltenen Fällen auch O(n) sein
