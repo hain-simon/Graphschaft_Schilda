@@ -2,13 +2,21 @@ package problemImplementations;
 import java.util.HashMap;
 
 public class Woerterbuch {
-    HashMap<String, String> book = new HashMap<>();
+    HashMap<String, String> schildaGerman = new HashMap<>();
+    HashMap<String, String> germanSchilda = new HashMap<>();
 
-    public String getMeaning(String key) {
-        return book.getOrDefault(key, "Not found");
+    public String getSchildaToGerman(String key) {
+        return schildaGerman.getOrDefault(key, "Not found");
     }
 
-    public void setMeaning(String key, String value) {
-        book.put(key, value);
+    public String getGermanToSchilda(String key){
+        return germanSchilda.getOrDefault(key, "Not found");
+    }
+
+
+
+    public void setMeaningSchildaGerman(String schildaWord, String germanWord) {
+        schildaGerman.put(schildaWord, germanWord);
+        germanSchilda.put(germanWord, schildaWord);
     }
 }
