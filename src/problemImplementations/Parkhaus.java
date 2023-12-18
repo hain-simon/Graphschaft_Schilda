@@ -15,6 +15,9 @@ public class Parkhaus {
         bestAvailable = 0;
     }
 
+    public boolean isFree(int parkingNum){
+        return spaceFree[parkingNum];
+    }
     public void unreserve(int parkingNum){
         spaceFree[parkingNum] = true;
         if(bestAvailable > parkingNum){
