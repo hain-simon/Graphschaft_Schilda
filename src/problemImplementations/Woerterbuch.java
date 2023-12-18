@@ -1,4 +1,4 @@
-package problems;
+package problemImplementations;
 import java.util.HashMap;
 
 public class Woerterbuch {
