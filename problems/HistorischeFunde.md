@@ -1,4 +1,4 @@
-# Historisch Funde
+# Historische Funde
 
 Beim Ausheben der Wege während des Straßenbaus wurde ein antiker Feuerwerksplan
 gefunden. Die Lage der pyrotechnischen Effekte und die Zündschnüre sind noch sehr gut zu
