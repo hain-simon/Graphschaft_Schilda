@@ -1,5 +1,8 @@
 # Woerterbuch
 
+Die Stadt Schilda floriert und hat sich zu einem ordentlichen Publikumsmagneten entwickelt. Leider kommt es immer wieder zu Problemen, da die Touristen die Bürger Schildas nicht verstehen – kein Wunder, denn die Sprache Schildas ist sehr ungewöhnlich: Der Sprachschatz Schildas ist immens. Die Bürger Schildas sind sehr kreativ und erfinden täglich neue Wörter und erweitern damit ihren Wortschatz. Sie sollen nun ein Wörterbuch entwickeln, welches sehr effizient neue Wörter aufnehmen und die Bedeutung von Wörtern suchen kann.
+
+
 ## Welche Daten sollen verarbeitet werden?
 
 - Wörter in ihren Übersetzungen Deutsch und Schilda
