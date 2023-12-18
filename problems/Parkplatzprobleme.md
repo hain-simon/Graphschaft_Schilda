@@ -8,7 +8,9 @@ schlägt die Software den nächsten freien Parkplatz vor.
 - Die Graphschaft Schilda beauftragt Sie, ein solches Parkplatzzuordnungssystem zu entwickeln. Dabei
 soll effizient der nächste freie Parkplatz berechnet werden.
 
+## Notizen
 
+- Lösung mit Pointers eventuell nicht gewünscht. Eventuell auch mit Queue?
 
 ## Welche Daten sollen verarbeitet werden?
 
@@ -32,7 +34,7 @@ soll effizient der nächste freie Parkplatz berechnet werden.
 
 ## Welche Datenstruktur eignet sich?
 
-- Queue, die die kleinsten Nummern speichert
+- Pointer, der kleinste freie Nummer speichert. Falls diese Reserviert wird, gehe zur nächsten freien Nummer
 
 ## Was ist die Laufzeit?
 

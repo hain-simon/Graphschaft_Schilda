@@ -55,18 +55,38 @@ public class CustomLinkedList<T>{
         currentNode.value = value;
     }
 
-    public void insert(int index, T value){
+    public T get(int index){
         checkOutOfBounds(index);
-        //We go to prior index and insert new Node there
         Node<T> currentNode = headNode;
-        for(int i = 0; i < index - 1; i++){
+        for(int i = 0; i < index; i++){
             currentNode = currentNode.nextNode;
         }
-        Node<T> insertionNode = new Node<T>(value);
-        insertionNode.nextNode = currentNode.nextNode;
-        currentNode.nextNode = insertionNode;
+        return currentNode.value;
+    }
+
+    public void insert(int index, T value){
+        checkOutOfBounds(index);
+        //If we want to insert at Index 0
+        if(index == 0){
+            Node<T> newNode = new Node<>(value);
+            newNode.nextNode = headNode;
+            headNode = newNode;
+        }
+        else {
+            //We go to prior index and insert new Node there
+            //Insertion between 2 Nodes or at last index
+            Node<T> currentNode = headNode;
+            for (int i = 0; i < index - 1; i++) {
+                currentNode = currentNode.nextNode;
+            }
+            Node<T> insertionNode = new Node<T>(value);
+            insertionNode.nextNode = currentNode.nextNode;
+            currentNode.nextNode = insertionNode;
+        }
         size++;
     }
+
+
     private class Node<T>{
         private T value;
         private Node <T> nextNode;
