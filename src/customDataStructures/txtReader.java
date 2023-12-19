@@ -7,6 +7,7 @@ public class txtReader {
     public static void main(String[] args) {
         // Pfad zur .txt-Datei
         //Eigenen Pfad eingeben, um betsimmte Datei einzulesen
+
         String filePath = "C:/Users/louis/Desktop/Matrix.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
