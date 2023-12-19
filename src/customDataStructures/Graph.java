@@ -32,7 +32,7 @@ public class Graph <T>{
                 for(Node<T> childNode : parentNode.connectedNodes){
                     int totalDistance = distance.get(parentNode) + parentNode.connectionWeights.get(childNode);
                     //Set the smallest distance
-                    if(totalDistance <= smallestDistance){
+                    if(!visitedNodes.contains(childNode) && totalDistance <= smallestDistance){
                         smallestDistance = totalDistance;
                         nextNode = childNode;
                     }
