@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Graph <T>{
     //List of Nodes that are in graph
-    List<Node<T>> nodes = new ArrayList<>();
+    public List<Node<T>> nodes = new ArrayList<>();
 
     public int dijkstra(Node<T> startNode, Node<T> endNode){
         //Map every Node to their distance

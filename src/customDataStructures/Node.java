@@ -14,4 +14,12 @@ public class Node<T>{
     //Mapping connected Nodes to their weight. If graph is unweighted, every weight is 1
     public Map<Node<T>, Integer> connectionWeights = new HashMap<>();
 
+    public Node(String name) {
+        this.name = name;
+    }
+
+    public Node(String name, T value) {
+        this.name = name;
+        this.value = value;
+    }
 }
