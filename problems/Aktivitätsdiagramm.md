@@ -28,7 +28,7 @@
 
 ## Welcher Algorithmus eignet sich?
 
-
+- DepthFirstSearch
 
 ## Welche Datenstruktur eignet sich?
 

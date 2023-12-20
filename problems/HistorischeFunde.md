@@ -24,7 +24,8 @@ Zündschnur immer mit gleichbleibender Geschwindigkeit abbrennt…)
 
 ## Welcher Algorithmus eignet sich?
 
-- BreathFirstSearch
+- (BreathFirstSearch)
+- Djikstra bis alle besucht wurden
 
 ## Welche Datenstruktur eignet sich?
 

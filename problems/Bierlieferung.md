@@ -45,7 +45,7 @@ A, B, C,  D
 
 ## Welcher Algorithmus eignet sich?
 
-
+- FortFulkerson
 
 ## Welche Datenstruktur eignet sich?
 

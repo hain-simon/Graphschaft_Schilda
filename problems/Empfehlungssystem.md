@@ -38,7 +38,7 @@ Wochenendbesuch, offen für Neues, etc) Empfehlungen für Freizeitaktivitäten g
 
 ## Welcher Algorithmus eignet sich?
 
-
+- K-Means?
 
 ## Welche Datenstruktur eignet sich?
 
