@@ -33,6 +33,7 @@
 ## Welcher Algorithmus eignet sich?
 
 - Vertex Cover
+- Set Cover Problem
 
 ## Welche Datenstruktur eignet sich?
 

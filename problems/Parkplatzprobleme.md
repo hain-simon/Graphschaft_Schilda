@@ -30,7 +30,7 @@ soll effizient der nächste freie Parkplatz berechnet werden.
 
 ## Welcher Algorithmus eignet sich?
 
-- /
+- Breitensuche
 
 ## Welche Datenstruktur eignet sich?
 

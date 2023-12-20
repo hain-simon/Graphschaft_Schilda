@@ -36,7 +36,8 @@
 
 ## Welcher Algorithmus eignet sich?
 
-
+- Bipartierter Graph
+- Ford Fulkerson
 
 ## Welche Datenstruktur eignet sich?
 

@@ -45,7 +45,8 @@ A, B, C,  D
 
 ## Welcher Algorithmus eignet sich?
 
-- FortFulkerson
+- Ford Fulkerson
+- Maximaler Fluss
 
 ## Welche Datenstruktur eignet sich?
 

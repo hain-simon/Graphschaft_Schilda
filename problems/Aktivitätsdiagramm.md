@@ -29,6 +29,7 @@
 ## Welcher Algorithmus eignet sich?
 
 - DepthFirstSearch
+- Topologische Sortierung
 
 ## Welche Datenstruktur eignet sich?
 

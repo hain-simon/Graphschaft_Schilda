@@ -74,7 +74,7 @@ public class CustomLinkedList<T>{
         }
         else {
             //We go to prior index and insert new Node there
-            //Insertion between 2 Nodes or at last index
+            //Insertion between 2 Nodes or at last indexs
             Node<T> currentNode = headNode;
             for (int i = 0; i < index - 1; i++) {
                 currentNode = currentNode.nextNode;
