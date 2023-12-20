@@ -32,7 +32,7 @@
 
 ## Welcher Algorithmus eignet sich?
 
-
+- Vertex Cover
 
 ## Welche Datenstruktur eignet sich?
 

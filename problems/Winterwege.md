@@ -29,7 +29,9 @@
 
 ## Welcher Algorithmus eignet sich?
 
-- Greedy?
+- Djikstra abgewandelt?
+- Minimaler Spannbaum
+- Prim Algorithmus
 
 ## Welche Datenstruktur eignet sich?
 

@@ -15,6 +15,18 @@
 
 ## Notizen
 
+      A   B   C   D
+A     0   10
+
+B             20
+
+C                 15
+
+D
+
+A, B, C,  D
+    8,    10
+
 ## Welche Daten sollen verarbeitet werden?
 
 - Graph mit bereits verbundenen Restaurants
