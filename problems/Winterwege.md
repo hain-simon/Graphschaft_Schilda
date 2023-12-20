@@ -30,8 +30,11 @@
 ## Welcher Algorithmus eignet sich?
 
 - Djikstra abgewandelt?
-- Minimaler Spannbaum
 - Prim Algorithmus
+
+## Welches algorithmische Problem?
+
+- Minimaler Spannbaum
 
 ## Welche Datenstruktur eignet sich?
 
