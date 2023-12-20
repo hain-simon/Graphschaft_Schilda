@@ -7,9 +7,40 @@ import java.util.Map;
 
 public class Graph <T>{
     //List of Nodes that are in graph
-    public List<Node<T>> nodes = new ArrayList<>();
 
+
+    public List<Node<T>> getNodes(int[][] inputArr){
+
+        List<Node<T>> nodes = new ArrayList<>();
+        Map<String, Node<T>> nodeMap = new HashMap<>();
+
+        for(int i = 0; i < inputArr.length; i++){
+            //Initialize all Nodes
+            String name = "node" + i;
+            Node<T> newNode = new Node<>(name);
+            nodes.add(newNode);
+            nodeMap.put(name, newNode);
+        }
+
+        //Iterate through arr, set connections
+        for(int i = 0; i < inputArr.length; i++){
+            for(int j = 0; j < inputArr[i].length; j++){
+                if(inputArr[i][j] != 0){
+                    //If weight is not 0, add connectedNode, with correct weight
+                    Node<T> connectedNode = nodeMap.get("node" + j);
+                    nodes.get(i).connectedNodes.add(connectedNode);
+                    nodes.get(i).connectionWeights.put(connectedNode, inputArr[i][j]);
+                }
+            }
+        }
+
+        return nodes;
+    }
+
+
+    /*
     public int dijkstra(Node<T> startNode, Node<T> endNode){
+        public List<Node<T>> nodes = new ArrayList<>();
         //Map every Node to their distance
         Map<Node<T>, Integer> distance = new HashMap<>();
         //Set every distance to maximum value
@@ -47,5 +78,8 @@ public class Graph <T>{
 
         return distance.get(endNode);
     }
+
+    */
+
 
 }
