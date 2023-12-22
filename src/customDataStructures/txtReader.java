@@ -2,6 +2,7 @@ package customDataStructures;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.FileReader;
+
 public class txtReader {
     //falls einer benötigt wird
     public static void main(String[] args) {
