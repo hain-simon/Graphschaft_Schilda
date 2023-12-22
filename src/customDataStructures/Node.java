@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Node<T>{
-    String name;
+    public String name;
     T value;
 
     //Each connected Node
