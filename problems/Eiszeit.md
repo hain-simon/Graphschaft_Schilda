@@ -20,20 +20,53 @@
 
 ## Welche Daten sollen verarbeitet werden?
 
-- Graph mit verbundenen Blocks
 
 ## Was sind die Eingaben?
 
-- Graph mit verbunden Blocks
+- Eingabe in den ALgorithmus ist ein ungerichteter und ungewichteter Graph. Dieser wird durch Abfrage in der Konsole mit der Klasse GraphScanner erstellt
+
 
 ## Was sind die Ausgaben?
 
-- Knoten, an denen Eisstände aufgebaut werden müssen
+- Die Ausgabe dieser Klasse ist wie folgt aufgebaut: 
+  1. Adjazenzmatrix, die aus dem Graph erstellt wird 
+  2. Adjazenzliste, ebenfalss aus dem Graphen erstellt 
+  3. Lösungssets - Lösung zum Problem
+  4. Anzahl der Knoten, mit denen alle Kanten abgedeckt werden können 
+
+
+- Beispielausgabe: 
+  - Adjacency Matrix:
+  
+      1 1 0 1
+  
+      1 1 1 1
+  
+      0 1 1 1
+  
+      1 1 1 1
+
+  - Adjacency List:
+  
+    0: 0 1 3
+  
+    1: 0 1 2 3
+  
+    2: 1 2 3
+  
+    3: 0 1 2 3
+
+  - Lösungs Sets: [[0, 1, 2, 3]]
+  
+
+    Man benöitgt 1 Knoten, um alle Kanten abzudecken.
+
+    Hier sind die Knoten mit ihren jeweiligen Kanten, um alle Kanten abzudecken:
+    Knoten 1 mit folgenden Kanten: [0, 1, 2, 3]
 
 ## Welcher Algorithmus eignet sich?
 
-- Vertex Cover
-- Set Cover Problem
+- um dieses Problem zu lösen , eignet sich der Set - Cover Algorithmus. Dieser arbeitet mit einer Kantenüberdeckung
 
 ## Welche Datenstruktur eignet sich?
 
