@@ -19,11 +19,11 @@
 ## Notizen
 
 ## Welche Daten sollen verarbeitet werden?
-
+- Es sollen Daten eines Graphen, in form einer zweidimensionalen Matrix oder einer Adjazenzliste verarbeitet werden.
 
 ## Was sind die Eingaben?
 
-- Eingabe in den ALgorithmus ist ein ungerichteter und ungewichteter Graph. Dieser wird durch Abfrage in der Konsole mit der Klasse GraphScanner erstellt
+- Eingabe in den ALgorithmus ist ein ungerichteter und ungewichteter Graph. Dieser wird durch Abfrage in der Konsole mit der Klasse GraphScanner erstellt.
 
 
 ## Was sind die Ausgaben?
@@ -35,43 +35,47 @@
   4. Anzahl der Knoten, mit denen alle Kanten abgedeckt werden können 
 
 
-- Beispielausgabe: 
-  - Adjacency Matrix:
-  
-      1 1 0 1
-  
-      1 1 1 1
-  
-      0 1 1 1
-  
-      1 1 1 1
+- Beispielausgabe:
 
-  - Adjacency List:
+      Adjacency Matrix:
   
-    0: 0 1 3
+             1 1 0 1
+    
+             1 1 1 1
   
-    1: 0 1 2 3
+             0 1 1 1
   
-    2: 1 2 3
-  
-    3: 0 1 2 3
+             1 1 1 1
 
-  - Lösungs Sets: [[0, 1, 2, 3]]
+      Adjacency List:
+    
+            0: 0 1 3
+  
+            1: 0 1 2 3
+  
+            2: 1 2 3
+
+            3: 0 1 2 3
+
+      Lösungs Sets: [[0, 1, 2, 3]]
   
 
-    Man benöitgt 1 Knoten, um alle Kanten abzudecken.
+      Man benöitgt 1 Knoten, um alle Kanten abzudecken.
 
-    Hier sind die Knoten mit ihren jeweiligen Kanten, um alle Kanten abzudecken:
-    Knoten 1 mit folgenden Kanten: [0, 1, 2, 3]
+      Hier sind die Knoten mit ihren jeweiligen Kanten, um alle Kanten abzudecken:
+      Knoten 1 mit folgenden Kanten: [0, 1, 2, 3]
 
 ## Welcher Algorithmus eignet sich?
 
 - um dieses Problem zu lösen , eignet sich der Set - Cover Algorithmus. Dieser arbeitet mit einer Kantenüberdeckung
 
 ## Welche Datenstruktur eignet sich?
-
-
-
+- Hier eignet sich die Datenstruktur Graph, umgesetzt durch eine Adjazenzmatrix oder eine Adjazenzliste
+- Zur Umsetzung des Algorithmus werden zusätzliche Datenstrukturen verwendet: 
+  - Datenstruktur List 
+  - Datenstruktur Set 
+## Welches algorithmische Problem?
+- Das Set - Cover Problem ist ein klassisches NP vollständiges Problem. Es ist schwierig, eine optimale Lösung in polynomieller Zeit zu finden. Eine gegebene Lösung lässt sich allerdings schnell überprüfen. 
 ## Was ist die Laufzeit?
 
 
