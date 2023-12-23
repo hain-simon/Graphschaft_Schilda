@@ -13,6 +13,14 @@ public class undirectedGraph {
         }
     }
 
+    public undirectedGraph() {
+        this.vertices = vertices;
+        this.edges = new ArrayList<>(vertices);
+        for (int i = 0; i < vertices; i++) {
+            edges.add(new HashSet<>());
+        }
+    }
+
     public void addEdge(int vertex1, int vertex2) {
         edges.get(vertex1).add(vertex2);
         edges.get(vertex2).add(vertex1); // Hinzufügen der Kante in die andere Richtung
