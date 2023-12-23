@@ -3,7 +3,7 @@ import customDataStructures.GraphScanner;
 
 import java.util.*;
 
-public class AlgorithmusEiszeit {
+public class Eiszeit {
     public static void main(String[] args) {
         // Beispielgraph
         undirectedGraph graph;
