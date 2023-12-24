@@ -67,11 +67,21 @@ public class CustomMinHeap {
         heap[pos] = temp;
     }
 
-    /*
-    missing:
-    insert
-    extract max
-    getmax
-     */
+    public void insert(int value){
+        heap[++size] = value;
+        int current = size;
+        heapifyUp(current);
+    }
+
+    public int extractMin(){
+        int min = heap[1];
+        heap[1] = heap[size--];
+        heapifyDown(1);
+        return min;
+    }
+
+    public int getMin() {
+        return heap[1];
+    }
 
 }
