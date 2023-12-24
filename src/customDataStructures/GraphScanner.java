@@ -10,7 +10,7 @@ public class GraphScanner
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Geben Sie die Anzahl der Knoten ein: ");
-        int numNodes = scanner.nextInt(); //Eine int Zahl wird eingelesen und wird in der Variable numNodes gespeichert. Sagt aus wie viele Knoten der Grpah hat
+        int numNodes = scanner.nextInt(); //Eine int Zahl wird eingelesen und wird in der Variable numNodes gespeichert. Sagt aus wie viele Knoten der Graph hat
 
         undirectedGraph graph = new undirectedGraph(numNodes);//ein ungerichteter Graph wird erstellt mit der Anzahl numNodes, die gerade eingelesen wurde
 
@@ -21,12 +21,12 @@ public class GraphScanner
             int numEdges = scanner.nextInt();
             System.out.println();
 
-            //Hier wird jede Kante, die der Knoten hat abgefragt, zu welchem Nachbarknoten fürht. Diese Kante wird dann im Graphen gespeichert
+            //Hier wird jede Kante, die der Knoten hat abgefragt, zu welchem Nachbarknoten führt. Diese Kante wird dann im Graphen gespeichert
             for (int j = 0; j < numEdges; j++) {
 
                 System.out.print("	Geben Sie die Kante " + (j + 1) + " ein: ");
                 int neighbor = scanner.nextInt(); //Nummer des künftigen Nachbarknoten wird eingelesen
-                graph.addEdge(i, neighbor); //Im Grpah wird diese Kante gespeichert
+                graph.addEdge(i, neighbor); //Im Graph wird diese Kante gespeichert
             }
             System.out.println();
         }
