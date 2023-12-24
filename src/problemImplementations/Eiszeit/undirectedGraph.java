@@ -1,4 +1,4 @@
-package customDataStructures;
+package problemImplementations.Eiszeit;
 import java.util.*;
 
 public class undirectedGraph {
@@ -6,6 +6,14 @@ public class undirectedGraph {
     private List<Set<Integer>> edges;
 
     public undirectedGraph(int vertices) {
+        this.vertices = vertices;
+        this.edges = new ArrayList<>(vertices);
+        for (int i = 0; i < vertices; i++) {
+            edges.add(new HashSet<>());
+        }
+    }
+
+    public undirectedGraph() {
         this.vertices = vertices;
         this.edges = new ArrayList<>(vertices);
         for (int i = 0; i < vertices; i++) {
