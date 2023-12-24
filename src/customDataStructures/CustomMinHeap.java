@@ -6,7 +6,7 @@ public class CustomMinHeap {
     private int maxsize;
 
     /*
-    In this Heap, we start at Index 1 and reserve Index 0 for Integer.MIN_VALUE. This allows cleaner code and getting the Parent / Childs
+    In this Heap, we start at Index 1 and reserve Index 0 for Integer.MIN_VALUE. This allows cleaner code for getting the Parent / Childs
      */
 
     public CustomMinHeap(int maxsize){
