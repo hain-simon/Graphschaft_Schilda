@@ -1,6 +1,5 @@
 package problemImplementations.Eiszeit;
 import customDataStructures.GraphScanner;
-
 import java.util.*;
 
 public class Eiszeit {
@@ -26,7 +25,6 @@ public class Eiszeit {
         System.out.println("Lösungs Sets: " + solution);
         System.out.println();
         printNodesForEachSet(solution); //Aufruf der Methode printNodesForEachSet
-
     }
 
     public static void printNodesForEachSet(List<Set<Integer>> selectedSets) {
@@ -34,12 +32,11 @@ public class Eiszeit {
         System.out.println("Man benöitgt "+selectedSets.size()+ " Knoten, um alle Kanten abzudecken.");
         System.out.println();
         System.out.println("Hier sind die Knoten mit ihren jeweiligen Kanten, um alle Kanten abzudecken:");
-        // for schleife
+        //for schleife, um für jeden Knoten, der in der solution Liste ist die jeweiligen Kanten auszugeben
         for (int i = 0; i < selectedSets.size(); i++) {
             System.out.println("Knoten "+(i + 1) + " mit folgenden Kanten: " + selectedSets.get(i));
         }
         System.out.println();
-
     }
 
 }
