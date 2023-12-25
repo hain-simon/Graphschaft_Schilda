@@ -1,22 +1,20 @@
 package problemImplementations;
 
-import customDataStructures.Graph;
-import customDataStructures.Node;
+import customDataStructures.graph.Graph;
+import customDataStructures.graph.Vertex;
+
 import java.util.List;
 import java.util.ArrayList;
-
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Winterwege {
 
     public int[][] solve(int[][] input) {
 
+        /*
         Graph<Integer> graph = new Graph<>();
 
         //Get Nodes with weight
-        List<Node<Integer>> nodes = graph.getNodes(input);
+        List<Vertex<Integer>> vertices = graph.getNodes(input);
 
         //Answer array, if there is 1 at answer[i][j], then there should be a heated path between nodei and nodej
         int[][] answer = new int[input.length][input.length];
@@ -27,35 +25,35 @@ public class Winterwege {
             }
         }
 
-        Node<Integer> startNode = nodes.get(0);
+        Vertex<Integer> startVertex = vertices.get(0);
 
         //List of visited Nodes
-        List<Node<Integer>> visitedNodes = new ArrayList<>();
-        visitedNodes.add(startNode);
+        List<Vertex<Integer>> visitedVertices = new ArrayList<>();
+        visitedVertices.add(startVertex);
 
-        //While we haven't visited all nodes continue going
-        while(visitedNodes.size() < nodes.size()){
-            //From each visited  parentNode, check connected Nodes for minimum Distance
+        //While we haven't visited all vertices continue going
+        while(visitedVertices.size() < vertices.size()){
+            //From each visited  parentVertex, check connected Nodes for minimum Distance
             int smallestDistance = Integer.MAX_VALUE;
-            Node<Integer> nextNode = null;
-            Node<Integer> parent = null;
+            Vertex<Integer> nextVertex = null;
+            Vertex<Integer> parent = null;
             int i = -1;
             int j = -1;
-            for(Node<Integer> parentNode : visitedNodes){
-                for(Node<Integer> childNode : parentNode.connectedNodes){
-                    int distance = parentNode.connectionWeights.get(childNode);
+            for(Vertex<Integer> parentVertex : visitedVertices){
+                for(Vertex<Integer> childVertex : parentVertex.connectedVertices){
+                    int distance = parentVertex.connectionWeights.get(childVertex);
                     //Set the smallest distance
-                    if(!visitedNodes.contains(childNode) && distance <= smallestDistance){
+                    if(!visitedVertices.contains(childVertex) && distance <= smallestDistance){
                         smallestDistance = distance;
-                        nextNode = childNode;
-                        parent = parentNode;
+                        nextVertex = childVertex;
+                        parent = parentVertex;
 
                     }
                 }
             }
-            //Now we have to Node with the smallest distance, we add it
-            if(nextNode != null && parent != null) {
-                String childName = nextNode.name;
+            //Now we have to Vertex with the smallest distance, we add it
+            if(nextVertex != null && parent != null) {
+                String childName = nextVertex.name;
                 String parentName = parent.name;
 
                 int childNum = Integer.parseInt(childName.substring(4));
@@ -67,5 +65,8 @@ public class Winterwege {
         }
 
         return answer;
+
+         */
+        return new int[][]{};
     }
 }

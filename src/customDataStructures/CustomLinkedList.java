@@ -12,11 +12,11 @@ public class CustomLinkedList<T>{
         }
     }
     public void add(T value){
-        //If CustomLinedList is empty, set the headNode to a new Node with value
+        //If CustomLinedList is empty, set the headNode to a new Vertex with value
         if(size == 0){
             headNode = new Node<T>(value);
         }
-        //Otherwise go to last Node and insert new Node with value
+        //Otherwise go to last Vertex and insert new Vertex with value
         else {
             Node<T> currentNode = headNode;
             while(currentNode.nextNode != null){
@@ -29,14 +29,14 @@ public class CustomLinkedList<T>{
 
     public void remove(int index){
         checkOutOfBounds(index);
-        //If we remove the first Node, set second Node as headNode
+        //If we remove the first Vertex, set second Vertex as headNode
         if(index == 0){
             headNode = headNode.nextNode;
         }
         //otherwise set Parent's nextNode to one more next
         else {
             Node<T> currentNode = headNode;
-            //Iterate to Parent Node
+            //Iterate to Parent Vertex
             for (int i = 0; i < index - 1; i++) {
                 currentNode = currentNode.nextNode;
             }
@@ -73,7 +73,7 @@ public class CustomLinkedList<T>{
             headNode = newNode;
         }
         else {
-            //We go to prior index and insert new Node there
+            //We go to prior index and insert new Vertex there
             //Insertion between 2 Nodes or at last indexs
             Node<T> currentNode = headNode;
             for (int i = 0; i < index - 1; i++) {
