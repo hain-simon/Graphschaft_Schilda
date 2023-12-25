@@ -21,14 +21,14 @@ public class Graph <T>{
 
     private void initializeNodes(int[][] input, boolean isDirected){
 
-        //First we create a Vertex for each row in input
+        //First a vertex is created for each row in input
         for(int i = 0; i < input.length; i++){
-            String vertexName = "V" + i;
+            String vertexName = Integer.toString(i);
             Vertex<T> vertex = new Vertex<>(vertexName);
             vertices.add(vertex);
         }
 
-        //Now we iterate through input to set all Connections
+        //Set connections for each vertex
         for(int row = 0; row < input.length; row++){
             for(int col = 0; col < input[0].length; col++){
 
