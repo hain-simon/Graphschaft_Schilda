@@ -11,7 +11,17 @@ public class Graph <T>{
     public List<Vertex<T>> vertices = new ArrayList<>();
 
     //Initialize Graph with input
+    public Graph(int[][] input, boolean isDirected){
+        initializeNodes(input, isDirected);
+    }
+
+    //If no info is given for isDirected, the default value is set (notDirected)
     public Graph(int[][] input){
+
+        initializeNodes(input, false);
+    }
+
+    private void initializeNodes(int[][] input, boolean isDirected){
 
         //First we create a Vertex for each row in input
         for(int i = 0; i < input.length; i++){
@@ -30,9 +40,14 @@ public class Graph <T>{
                     Vertex<T> childVertex = vertices.get(col);
                     int weight = input[row][col];
                     parentVertex.setConnection(childVertex, weight);
+                    //If the graph is notDirected (undirected) set edge with swapped vertices
+                    if(!isDirected){
+                        childVertex.setConnection(parentVertex, weight);
+                    }
                 }
             }
         }
+
     }
 
 }

@@ -29,7 +29,6 @@
 
 ## Welcher Algorithmus eignet sich?
 
-- Djikstra abgewandelt?
 - Prim Algorithmus
 
 ## Welches algorithmische Problem?
@@ -38,7 +37,7 @@
 
 ## Welche Datenstruktur eignet sich?
 
-- Graph
+- Graph, gewichtet und ungerichtet
 
 ## Was ist die Laufzeit?
 
