@@ -5,11 +5,12 @@ import java.util.*;
 public class Eiszeit {
     public static void main(String[] args) {
         int[][] inputArray = {
-                {0, 1, 1, 1, 0},
-                {1, 0, 1, 0, 0},
-                {1, 1, 0, 1, 1},
-                {1, 0, 1, 0, 1},
-                {0, 0, 1, 1, 0}
+                {0, 1, 1, 1, 0, 0},
+                {1, 0, 1, 0, 0, 1},
+                {1, 1, 0, 1, 1, 0},
+                {1, 0, 1, 0, 1, 1},
+                {1, 0, 1, 0, 1, 0},
+                {0, 0, 0, 1, 0, 1}
         };
 
         //ein Referenzattribut der Klasse undirectredGraph wird erstellt, aber noch nicht initialisiert
@@ -44,7 +45,8 @@ public class Eiszeit {
         System.out.println("Hier sind die Knoten mit ihren jeweiligen Kanten, um alle Kanten abzudecken:");
         //for schleife, um für jeden Knoten, der in der solution Liste ist die jeweiligen Kanten auszugeben
         for (int i = 0; i < selectedSets.size(); i++) {
-            System.out.println("Knoten "+(i + 1) + " mit folgenden Kanten: " + selectedSets.get(i));
+            //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
+            System.out.println("    "+ (i+1) + ")  Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
         }
         System.out.println();
     }
