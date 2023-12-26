@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Graph <T>{
 
+    int[][] input;
+
     //List of all Vertices
     public List<Vertex<T>> vertices = new ArrayList<>();
 
@@ -20,6 +22,8 @@ public class Graph <T>{
     }
 
     private void initializeNodes(int[][] input, boolean isDirected){
+
+        this.input = input;
 
         //First a vertex is created for each row in input
         for(int i = 0; i < input.length; i++){
