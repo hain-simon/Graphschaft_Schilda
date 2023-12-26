@@ -7,11 +7,16 @@ public class Vertex<T>{
     public String name;
     T value;
 
-    public List<Edge<T>> edges = new ArrayList<>();
+    //List of all edges going out of this Vertex
+    public List<Edge<T>> edgesOut = new ArrayList<>();
+
+    //List of all edges going into this Vertex -> Ford Fulkerson uses backtracking
+    public List<Edge<T>> edgesIn = new ArrayList<>();
 
     public void setConnection(Vertex<T> childVertex, int weight){
         Edge<T> edge = new Edge<>(this, childVertex, weight);
-        edges.add(edge);
+        this.edgesOut.add(edge);
+        childVertex.edgesIn.add(edge);
     }
 
     public Vertex(String name) {
