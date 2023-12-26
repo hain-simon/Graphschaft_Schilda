@@ -4,14 +4,24 @@ import java.util.*;
 
 public class Eiszeit {
     public static void main(String[] args) {
+        int[][] inputArray = {
+                {0, 1, 1, 1, 0},
+                {1, 0, 1, 0, 0},
+                {1, 1, 0, 1, 1},
+                {1, 0, 1, 0, 1},
+                {0, 0, 1, 1, 0}
+        };
+
         //ein Referenzattribut der Klasse undirectredGraph wird erstellt, aber noch nicht initialisiert
         undirectedGraph graph;
 
-        //ein neues Objekt der Klasse GraphScanner wird erstellt
+        //ein neues Objekt der Klasse GraphScanner wird erstellt - aktuell unrelevant
         GraphScanner scanner = new GraphScanner();
+        //ein neues Objekt der Klasse GraphScanner wird erstellt
+        GraphBuilder builder = new GraphBuilder();
 
         //Initialisierung des Referenzattribut graph: scanner.scanGraph() gibt einen Graphen zurück und initalisiert das Referenzatribut graph
-        graph = scanner.scanGraph();
+        graph = builder.buildGraphFromMatrix(inputArray);
 
         //Ausgabe des Graphen als Matrix und Liste
         System.out.println();

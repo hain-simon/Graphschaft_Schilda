@@ -16,6 +16,8 @@ public class undirectedGraph {
         }
     }
 
+
+
     //Methode addEdge fügt eine Kante zwischen zwei Knoten hinzu. Diese Verbindung wird dann im HashSet der jeweiligen Knoten zu sehen sein
     public void addEdge(int vertex1, int vertex2) {
         edges.get(vertex1).add(vertex2);    //Hinzufügen einer Kante zwischen Knoten1 (vertex1) und Knoten2 (vertex2)
