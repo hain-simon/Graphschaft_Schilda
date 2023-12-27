@@ -1,5 +1,5 @@
 package problemImplementations.Eiszeit;
-import customDataStructures.GraphScanner;
+import customDataStructures.graph.*;
 import java.util.*;
 
 public class Eiszeit {
@@ -14,20 +14,20 @@ public class Eiszeit {
         };
 
         //ein Referenzattribut der Klasse undirectredGraph wird erstellt, aber noch nicht initialisiert
-        undirectedGraph graph;
+        Graph<Integer> graph = new Graph<>(inputArray);
 
         //ein neues Objekt der Klasse GraphScanner wird erstellt - aktuell unrelevant
-        GraphScanner scanner = new GraphScanner();
+       // GraphScanner scanner = new GraphScanner();
         //ein neues Objekt der Klasse GraphScanner wird erstellt
         GraphBuilder builder = new GraphBuilder();
 
         //Initialisierung des Referenzattribut graph: scanner.scanGraph() gibt einen Graphen zurück und initalisiert das Referenzatribut graph
-        graph = builder.buildGraphFromMatrix(inputArray);
+        //graph = builder.buildGraphFromMatrix(inputArray);
 
         //Ausgabe des Graphen als Matrix und Liste
         System.out.println();
-        graph.printAdjacencyMatrix();// Ausgabe des erstellten Graphen als Adjazenzmatrix
-        graph.printAdjacencyList();// Ausgabe des erstellten Grahphen als Adjazenzliste
+        //graph.printAdjacencyMatrix();// Ausgabe des erstellten Graphen als Adjazenzmatrix
+        //graph.printAdjacencyList();// Ausgabe des erstellten Grahphen als Adjazenzliste
 
         //Hier wird eine Lite gespeichert, die Elemente des Typs Set<Integer> speichert. Diese enthält die Lösung, die erstellt wird beim Aufrufen der Methode .setCover(graph)
         List<Set<Integer>> solution = SetCover.setCover(graph);

@@ -1,10 +1,10 @@
 package problemImplementations.Eiszeit;
-import customDataStructures.GraphScanner;
+import customDataStructures.graph.*;
 
 import java.util.*;
 
 public class SetCover {
-    public static List<Set<Integer>> setCover(undirectedGraph graph) {
+    public static List<Set<Integer>> setCover(Graph<Integer> graph) {
         List<Set<Integer>> result = new ArrayList<>();
         Set<Integer> remainingVertices = new HashSet<>();
 
@@ -36,6 +36,7 @@ public class SetCover {
 
         return result;
     }
+
 
 
 }
