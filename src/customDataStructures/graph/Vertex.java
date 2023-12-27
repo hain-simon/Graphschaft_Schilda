@@ -17,6 +17,7 @@ public class Vertex<T>{
         Edge<T> edge = new Edge<>(this, childVertex, weight);
         this.edgesOut.add(edge);
         childVertex.edgesIn.add(edge);
+
     }
 
     public Vertex(String name) {

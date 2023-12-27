@@ -41,11 +41,15 @@ public class Graph <T>{
                     Vertex<T> parentVertex = vertices.get(row);
                     Vertex<T> childVertex = vertices.get(col);
                     int weight = input[row][col];
+                    System.out.println("New connection: " + row + " and " + col + " weight is: " + weight);
                     parentVertex.setConnection(childVertex, weight);
                     //If the graph is notDirected (undirected) set edge with swapped vertices
+                    /*
                     if(!isDirected){
                         childVertex.setConnection(parentVertex, weight);
                     }
+
+                     */
                 }
             }
         }

@@ -43,6 +43,8 @@ public class Prim {
             int parentIndex = Integer.parseInt(parentVertex.name);
             int childIndex = Integer.parseInt(childVertex.name);
 
+            System.out.println("Set connection: " + parentIndex + " and " + childIndex + " weight is " + shortestEdge.connectionWeight);
+
             ans[parentIndex][childIndex] = 1;
             visitedVertices.add(parentVertex);
 
