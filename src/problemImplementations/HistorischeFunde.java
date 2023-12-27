@@ -1,4 +1,4 @@
-package customDataStructures;
+package problemImplementations;
 
 public class HistorischeFunde {
 
