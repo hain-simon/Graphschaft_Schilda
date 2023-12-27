@@ -2,7 +2,7 @@ package customDataStructures.graph;
 
 public class TestGraphs {
 
-    public static Graph<Integer> getGraph1(){
+    public static Graph<Integer> getUndirectedGraph1(){
         int[][] graphArr = new int[][]{
                 {0, 10, 0, 0, 0, 15},
                 {10, 0, 10, 0, 3, 0},
@@ -14,7 +14,7 @@ public class TestGraphs {
         return new Graph<>(graphArr);
     }
 
-    public static Graph<Integer> getGraph2(){
+    public static Graph<Integer> getUndirectedGraph2(){
         int[][] graphArr = new int[][]{
                 {0, 7, 0, 2, 0, 4},
                 {7, 0, 1, 0, 0, 0},
@@ -25,4 +25,25 @@ public class TestGraphs {
         };
         return new Graph<>(graphArr);
     }
+
+    public static Graph<Integer> getDirectedGraph1(){
+        int[][] graphArr = new int[][]{
+                {0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 1, 0, 0},
+                {0, 0, 0, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0}
+        };
+        return new Graph<>(graphArr);
+    }
 }
+
+/*
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0}
+ */

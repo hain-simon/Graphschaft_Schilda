@@ -14,4 +14,4 @@
 ###Arbeitseinteilung
 - Louis:
 - Joshua:
-- Simon: 
+- Simon: Aktivitätsdiagramm

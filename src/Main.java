@@ -4,6 +4,6 @@ import problemImplementations.Winterwege;
 public class Main {
     public static void main(String[] args) {
 
-        Winterwege.solve(TestGraphs.getGraph2());
+        Winterwege.solve(TestGraphs.getUndirectedGraph1());
     }
 }
