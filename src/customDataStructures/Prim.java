@@ -5,11 +5,9 @@ import customDataStructures.graph.Vertex;
 import customDataStructures.graph.Edge;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Prim {
-    Graph<Integer> graph;
 
     public static int[][] solve(Graph<Integer> graph){
 
