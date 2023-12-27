@@ -33,7 +33,7 @@
 
 ## Welche Datenstruktur eignet sich?
 
-
+- Gerichteter, ungewichteter Graph
 
 ## Was ist die Laufzeit?
 
