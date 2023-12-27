@@ -13,10 +13,10 @@ public class Graph <T>{
     //Initialize Graph with input
     public Graph(int[][] input){
 
-        initializeNodes(input);
+        initializeVertices(input);
     }
 
-    private void initializeNodes(int[][] input){
+    private void initializeVertices(int[][] input){
 
         this.input = input;
 
