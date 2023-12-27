@@ -14,6 +14,8 @@
 
 ## Notizen
 
+![img.png](img.png)
+
 ## Welche Daten sollen verarbeitet werden?
 
 - Verschiedene Aktivitäten, was muss vor was erledigt sein?
