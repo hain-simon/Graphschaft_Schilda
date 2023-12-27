@@ -13,4 +13,8 @@ public class Edge <T> {
         this.childVertex = childVertex;
         this.connectionWeight = connectionWeight;
     }
+
+    public Edge(int connectionWeight){
+        this.connectionWeight = connectionWeight;
+    }
 }
