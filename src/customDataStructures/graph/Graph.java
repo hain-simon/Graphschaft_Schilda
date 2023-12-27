@@ -37,7 +37,7 @@ public class Graph <T>{
             for(int col = 0; col < input[0].length; col++){
 
                 //If weight is not 0, then set connection
-                if(input[row][col] != 0){
+                if(input[row][col] != 0 && row != col){
                     Vertex<T> parentVertex = vertices.get(row);
                     Vertex<T> childVertex = vertices.get(col);
                     int weight = input[row][col];

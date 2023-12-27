@@ -9,8 +9,17 @@ import java.util.ArrayList;
 
 public class Winterwege {
 
-    public int[][] solve(Graph<Integer> graph) {
-        return Prim.solve(graph);
+    public static int[][] solve(Graph<Integer> graph) {
+        int[][] ans = Prim.solve(graph);
+        System.out.println("Connection Grid: ");
+        for(int i = 0; i < ans.length; i++){
+            for(int j = 0; j < ans[0].length; j++){
+                System.out.print(ans[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+
+        return ans;
     }
 
 }

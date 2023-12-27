@@ -60,7 +60,10 @@ public class Prim {
                 //If shortestEdge hasn't been set or if weight of current edge is smaller
                 //Set current edge as shortestEdge
                 if(shortestEdge == null || edge.connectionWeight <= shortestEdge.connectionWeight){
-                    shortestEdge = edge;
+                    //childVertex of edge cant be in visitedVertices already
+                    if(!visitedVertices.contains(edge.childVertex)) {
+                        shortestEdge = edge;
+                    }
                 }
             }//end inner for
         }//end outer for
