@@ -1,4 +1,4 @@
-package problemImplementations.Eiszeit;
+package problemImplementations;
 import customDataStructures.graph.*;
 
 import java.util.*;
