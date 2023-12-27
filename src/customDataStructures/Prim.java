@@ -34,7 +34,6 @@ public class Prim {
             Edge<Integer> shortestEdge = getShortestEdge(visitedVertices);
             //shortestEdge can't be null, this would mean we have to edge to go to anymore
             if(shortestEdge == null) {
-                System.out.println("No valid connection to every Location");
                 break;
             }
             //Now set the connection in ans and add parentVertex of edge to visitedVertices
@@ -42,8 +41,6 @@ public class Prim {
             Vertex<Integer> childVertex = shortestEdge.childVertex;
             int parentIndex = Integer.parseInt(parentVertex.name);
             int childIndex = Integer.parseInt(childVertex.name);
-
-            System.out.println("Set connection: " + parentIndex + " and " + childIndex + " weight is " + shortestEdge.connectionWeight);
 
             ans[parentIndex][childIndex] = 1;
             ans[childIndex][parentIndex] = 1;
