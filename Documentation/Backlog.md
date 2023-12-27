@@ -12,6 +12,6 @@
 
 ## Sprint 2: 25.12.2023
 ###Arbeitseinteilung
-- Louis:
-- Joshua:
+- Louis: ProjektAufgaben
+- Joshua: Historische Funde
 - Simon: Aktivitätsdiagramm

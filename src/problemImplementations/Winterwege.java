@@ -9,7 +9,8 @@ import java.util.ArrayList;
 
 public class Winterwege {
 
-    public static int[][] solve(Graph<Integer> graph) {
+    public static int[][] solve(int[][] input) {
+        Graph<Integer> graph = new Graph<>(input);
         int[][] ans = Prim.solve(graph);
         System.out.println("Connection Grid: ");
         for(int i = 0; i < ans.length; i++){

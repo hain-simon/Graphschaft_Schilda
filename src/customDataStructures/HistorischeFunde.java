@@ -1,4 +1,4 @@
-package HistorischeFunde;
+package customDataStructures;
 
 public class HistorischeFunde {
 
