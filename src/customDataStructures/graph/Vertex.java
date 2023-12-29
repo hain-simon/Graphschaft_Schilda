@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Vertex<T>{
     public String name;
-    T value;
+    public T value;
 
     //List of all edges going out of this Vertex
     public List<Edge<T>> edgesOut = new ArrayList<>();
