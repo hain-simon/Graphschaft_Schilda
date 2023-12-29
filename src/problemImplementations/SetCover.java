@@ -37,7 +37,7 @@ public class SetCover {
         System.out.println();
         System.out.println("Man benötigt "+result.size()+ " Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände eddizient durchzusetzen.");
         System.out.println();
-        System.out.println("Hier sind die Kreuzunge mit ihren jeweiligen verbundenen Kreuzungen:");
+        System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
         for (int i = 0; i < result.size(); i++) {
             //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
             System.out.println("Kreuzung "+ (i+1) + " deckt folgenden Kreuzungen ab: " + result.get(i));

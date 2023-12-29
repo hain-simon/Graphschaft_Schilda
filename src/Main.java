@@ -1,6 +1,7 @@
 import customDataStructures.TopologicalSort;
 import problemImplementations.AktivitätsDiagramm;
 import customDataStructures.graph.TestInput;
+import problemImplementations.ProjektAufgaben;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,5 +10,6 @@ public class Main {
         //SetCover.setCover(TestInput.getUndirectedGraph2());
 
         AktivitätsDiagramm.solve(TestInput.getDirectedGraph1());
+        //ProjektAufgaben.matchMitarbeiterProjekte(TestInput.getKompetenzenmatrix(), TestInput.getmitarbeiterProProjekt());
     }
 }

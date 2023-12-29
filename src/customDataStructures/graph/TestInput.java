@@ -37,6 +37,22 @@ public class TestInput {
         };
         return graphArr;
     }
+
+    public static int[][] getKompetenzenmatrix(){
+        int[][] kompetenzenMatrix = {
+                {1, 0, 1, 1, 0, 1},
+                {0, 1, 1, 0, 1, 1},
+                {1, 1, 1, 0, 1 , 1},
+                {0, 1, 0, 1, 0 , 1},
+                {0, 0, 1, 0, 1 , 0},
+                {1, 0, 1, 1, 0, 1}
+        };
+        return kompetenzenMatrix;
+    }
+    public static int[] getmitarbeiterProProjekt(){
+        int[] array = {2, 1, 4, 1, 2, 2};
+        return array;
+    }
 }
 
 /*
