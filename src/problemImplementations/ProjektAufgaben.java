@@ -2,18 +2,6 @@ package problemImplementations;
 import java.util.*;
 
 public class ProjektAufgaben {
-      /*
-	   * int[][] kompetenzenMatrix = {
-	            {1, 0, 1, 1, 0, 1},
-	            {0, 1, 1, 0, 1, 1},
-	            {1, 1, 1, 0, 1 , 1},
-	            {0, 1, 0, 1, 0 , 1},
-	            {0, 0, 1, 0, 1 , 0},
-	            {1, 0, 1, 1, 0, 1}
-	        };
-	    */
-
-
 
     public static int[][] matchMitarbeiterProjekte(int[][] kompetenzenMatrix, int[] mitarbeiterProProjekt) {
         int anzahlMitarbeiter = kompetenzenMatrix.length;
@@ -52,13 +40,13 @@ public class ProjektAufgaben {
         // Beschriftung der Projektnummern
         System.out.print("   ");
         for (int projekt = 0; projekt < zuordnung[0].length; projekt++) {
-            System.out.print("P" + projekt + " ");
+            System.out.print("Projekt" + projekt + " ");
         }
         System.out.println();
 
         for (int mitarbeiter = 0; mitarbeiter < zuordnung.length; mitarbeiter++) {
             // Beschriftung der Mitarbeiter
-            System.out.print("M" + mitarbeiter + ": ");
+            System.out.print("Mitarbeiter " + mitarbeiter + ": ");
             for (int projekt = 0; projekt < zuordnung[0].length; projekt++) {
                 System.out.print(zuordnung[mitarbeiter][projekt] + "  ");
             }
