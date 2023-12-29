@@ -13,6 +13,6 @@ public class Main {
         //AktivitätsDiagramm.solve(TestInput.getDirectedGraph1());
         //ProjektAufgaben.matchMitarbeiterProjekte(TestInput.getKompetenzenmatrix(), TestInput.getmitarbeiterProProjekt());
 
-        HistorischeFunde.solve(TestInput.getDirectedGraph2());
+        HistorischeFunde.solve(TestInput.getUndirectedGraph2());
     }
 }

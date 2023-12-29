@@ -14,6 +14,18 @@ public class TestInput {
         return graphArr;
     }
 
+    public static int[][] getUndirectedGraph2(){
+        int[][] graphArr = new int[][]{
+                {0, 7, 0, 2, 0, 4},
+                {7, 0, 1, 0, 0, 0},
+                {0, 1, 0, 5, 0, 0},
+                {2, 0, 5, 0, 10, 1},
+                {0, 0, 0, 10, 0, 5},
+                {4, 0, 0, 1, 5, 0}
+        };
+        return graphArr;
+    }
+
 
 
     public static int[][] getDirectedGraph1(){
@@ -29,17 +41,7 @@ public class TestInput {
     }
 
 
-    public static int[][] getDirectedGraph2(){
-        int[][] graphArr = new int[][]{
-                {0, 7, 0, 2, 0, 4},
-                {7, 0, 1, 0, 0, 0},
-                {0, 1, 0, 5, 0, 0},
-                {2, 0, 5, 0, 10, 1},
-                {0, 0, 0, 10, 0, 5},
-                {4, 0, 0, 1, 5, 0}
-        };
-        return graphArr;
-    }
+
 
 
 
