@@ -34,14 +34,26 @@ public class SetCover {
                 break;
             }
         }
-        System.out.println();
-        System.out.println("Man benötigt "+result.size()+ " Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände eddizient durchzusetzen.");
+
+        printInput(input);
+        System.out.println("Man benötigt "+result.size()+ " Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände effizient durchzusetzen.");
         System.out.println();
         System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
         for (int i = 0; i < result.size(); i++) {
             //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
-            System.out.println("Kreuzung "+ (i+1) + " deckt folgenden Kreuzungen ab: " + result.get(i));
+            System.out.println("Kreuzung "+ (i+1) + ": deckt folgenden Kreuzungen ab: " + result.get(i));
         }
         return result;
     }
+    public static void printInput(int[][] input) {
+        System.out.println("Input Matrix:");
+        for (int i = 0; i < input.length; i++) {
+            for (int j = 0; j < input[i].length; j++) {
+                System.out.print(input[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }
+

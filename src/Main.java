@@ -1,7 +1,7 @@
 import customDataStructures.TopologicalSort;
 import problemImplementations.AktivitätsDiagramm;
 import customDataStructures.graph.TestInput;
-import problemImplementations.ProjektAufgaben;
+import problemImplementations.*;
 
 public class Main {
     public static void main(String[] args) {

@@ -4,6 +4,11 @@ import java.util.*;
 public class ProjektAufgaben {
 
     public static int[][] matchMitarbeiterProjekte(int[][] kompetenzenMatrix, int[] mitarbeiterProProjekt) {
+        /*
+        Eingabe:
+            kompetenzenMatrix: Jede Zeile ist ein Mitarbeiter; jede Spalte ein Projekt --> wenn mitarbeiter und projekt selbe kompetenzen haben, ist in diesem feld eine 1. Falls die Kompetenzen nicht übereinstimmen ist in diesem Feld eine 0
+            mitarbeiterProProjekt: Für jedes Projekt wird eine gewünschte Anzahl an Arbeitern festgelegt. Jedes Projekt hat mind. 1 Arbeiter, außer es stimmen überhaupt keine Kompetenzen überein
+         */
         int anzahlMitarbeiter = kompetenzenMatrix.length;
         int anzahlProjekte = kompetenzenMatrix[0].length;
 

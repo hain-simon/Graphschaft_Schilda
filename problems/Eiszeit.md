@@ -16,14 +16,13 @@
   die Eisstände berechnet.
 
 
-## Notizen
 
 ## Welche Daten sollen verarbeitet werden?
-- Es sollen Daten eines Graphen, in form einer zweidimensionalen Matrix oder einer Adjazenzliste verarbeitet werden.
+- Es sollen Daten eines Graphen, in form einer zweidimensionalen Matrix, bzw. einer Adjazenzliste verarbeitet werden.
 
 ## Was sind die Eingaben?
 
-- Eingabe in den ALgorithmus ist ein ungerichteter und ungewichteter Graph. Dieser wird durch Abfrage in der Konsole mit der Klasse GraphScanner erstellt.
+- Eingabe in den ALgorithmus ist ein ungerichteter und ungewichteter Graph in Form einer zweidimensionalen Adjazenzmatrix.
 
 
 ## Was sind die Ausgaben?
@@ -37,33 +36,19 @@
 
 - Beispielausgabe:
 
-      Adjacency Matrix:
-  
-             1 1 0 1
-    
-             1 1 1 1
-  
-             0 1 1 1
-  
-             1 1 1 1
+      Input Matrix:
+      0 7 0 2 0 4
+      7 0 1 0 0 0
+      0 1 0 5 0 0
+      2 0 5 0 10 1
+      0 0 0 10 0 5
+      4 0 0 1 5 0
 
-      Adjacency List:
-    
-            0: 0 1 3
-  
-            1: 0 1 2 3
-  
-            2: 1 2 3
+      Man benötigt 2 Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände effizient durchzusetzen.
 
-            3: 0 1 2 3
-
-      Lösungs Sets: [[0, 1, 2, 3]]
-  
-
-      Man benöitgt 1 Knoten, um alle Kanten abzudecken.
-
-      Hier sind die Knoten mit ihren jeweiligen Kanten, um alle Kanten abzudecken:
-      Knoten 1 mit folgenden Kanten: [0, 1, 2, 3]
+      Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:
+      Kreuzung 1: deckt folgenden Kreuzungen ab: [0, 2, 4, 5]
+      Kreuzung 2: deckt folgenden Kreuzungen ab: [1, 3, 5]
 
 ## Welcher Algorithmus eignet sich?
 
