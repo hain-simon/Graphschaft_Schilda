@@ -16,8 +16,8 @@ public class TestInput {
 
     public static int[][] getUndirectedGraph2(){
         int[][] graphArr = new int[][]{
-                {0, 7, 0, 2, 0, 4},
-                {7, 0, 1, 0, 0, 0},
+                {0, 7, 0, 2, 0, 4}, //Vertex 0 has connection to Vertex 1 with weight 7, Vertex 3 with weight 2 ...
+                {7, 0, 1, 0, 0, 0}, //Vertex 1 has connection to Vertex 0 with weight 7 ....
                 {0, 1, 0, 5, 0, 0},
                 {2, 0, 5, 0, 10, 1},
                 {0, 0, 0, 10, 0, 5},
@@ -25,6 +25,8 @@ public class TestInput {
         };
         return graphArr;
     }
+
+
 
     public static int[][] getDirectedGraph1(){
         int[][] graphArr = new int[][]{
@@ -37,6 +39,11 @@ public class TestInput {
         };
         return graphArr;
     }
+
+
+
+
+
 
     public static int[][] getKompetenzenmatrix(){
         int[][] kompetenzenMatrix = {
