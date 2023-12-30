@@ -9,7 +9,6 @@ public class Main {
 
         //Winterwege.solve(TestInput.getUndirectedGraph1());
         //SetCover.setCover(TestInput.getUndirectedGraph2());
-
         //AktivitätsDiagramm.solve(TestInput.getDirectedGraph1());
         //ProjektAufgaben.matchMitarbeiterProjekte(TestInput.getKompetenzenmatrix(), TestInput.getmitarbeiterProProjekt());
 

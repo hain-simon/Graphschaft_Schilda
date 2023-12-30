@@ -32,7 +32,8 @@
 
 ## Was sind die Ausgaben?
 
-- Einteilung, welcher Mitarbeiter wo arbeitet
+-zweidimensionales Array. Jede Zeile entspricht ein Mitarbeiter. Jede Spalte entspricht ein Projekt. 
+Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in deren Kruezfeld 1. Wenn ein Mitarbeiter und ein Projekt nicht diegleichen Kompetenzen haben, so ist der Wert in ihrem Schnittfeld 0. 
 
 ## Welcher Algorithmus eignet sich?
 

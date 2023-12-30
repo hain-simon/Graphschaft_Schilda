@@ -43,17 +43,17 @@ public class ProjektAufgaben {
     private static void printZuordnung(int[][] zuordnung) {
         System.out.println("Zuordnung von Mitarbeitern zu Projekten:");
         // Beschriftung der Projektnummern
-        System.out.print("   ");
+        System.out.print("          ");
         for (int projekt = 0; projekt < zuordnung[0].length; projekt++) {
-            System.out.print("Projekt" + projekt + " ");
+            System.out.print("     Projekt " + projekt + " ");
         }
         System.out.println();
 
         for (int mitarbeiter = 0; mitarbeiter < zuordnung.length; mitarbeiter++) {
             // Beschriftung der Mitarbeiter
-            System.out.print("Mitarbeiter " + mitarbeiter + ": ");
+            System.out.print("Mitarbeiter " + mitarbeiter + ":   ");
             for (int projekt = 0; projekt < zuordnung[0].length; projekt++) {
-                System.out.print(zuordnung[mitarbeiter][projekt] + "  ");
+                System.out.print(zuordnung[mitarbeiter][projekt] + "              ");
             }
             System.out.println();
         }
