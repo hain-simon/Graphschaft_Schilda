@@ -5,39 +5,50 @@ import java.util.*;
 
 public class Eiszeit {
     public static List<Set<Integer>> setCover(int[][] input) {
+        //Deklarieren und Initialisieren eines Graphes, einer Liste result und einem Set remainingVertices
         Graph<Integer> graph = new Graph<>(input);
         List<Set<Integer>> result = new ArrayList<>();
         Set<Integer> remainingVertices = new HashSet<>();
 
+        //Initialsierung des Sets remainingVertices; Nach der Inititialisierung befinden sich alle Knoten des Graphen im Set remainingVertices
         for (int i = 0; i < graph.getVertices(); i++) {
             remainingVertices.add(i);
         }
 
+        //Solange die Liste remainingVertices nicht leer ist, wiederhole:
         while (!remainingVertices.isEmpty()) {
+            //Hilfsset bestSet und coveredVertices wird deklariert
             Set<Integer> bestSet = null;
             Set<Integer> coveredVertices = new HashSet<>();
 
+            //for Schleife, die alle Knoten im Graph durchläuft, also das komplette Set<Integer> set
             for (Set<Integer> set : graph.getEdges()) {
+                //Deklarieren eines neuen Sets Intersection, welches mit dem aktuellen Knoten set befüllt wird
                 Set<Integer> intersection = new HashSet<>(set);
+                //Berechnet die Schnittmenge zwischen der aktuellen Menge (set)/ Intersection und remainingVertices
                 intersection.retainAll(remainingVertices);
 
+                // Überprüfe, ob ein besserer Knoten mit mehr ausgehenden Kanten gefunden wurde und aktualisiere ihn gegebenenfalls
                 if (intersection.size() > coveredVertices.size()) {
                     coveredVertices = intersection;
                     bestSet = set;
 
                 }
             }
+            //Hinzufügen des bestSet zur Lösung, falls bestSet nicht null ist
             if (bestSet != null) {
-                result.add(bestSet);
-                remainingVertices.removeAll(bestSet);
+                result.add(bestSet); //Der Knoten mit bestSet - Kanten wird zur Liste Ergebnis hinzugefügt
+                remainingVertices.removeAll(bestSet); // Entfernt die abgedeckten Knoten aus der Menge  remainingVertices
             } else {
                 break;
             }
         }
-
+        //Aufrufen der Methode print, um den Input und den Output auf der Konsole auszugeben
         print(input,result);
         return result;
     }
+
+    //Methode, um die Input Matrix auszugeben, sowie die Lösungsliste
     public static void print(int[][] input, List<Set<Integer>> result) {
         System.out.println("Input Matrix:");
         for (int i = 0; i < input.length; i++) {
