@@ -3,7 +3,7 @@ import customDataStructures.graph.*;
 
 import java.util.*;
 
-public class SetCover {
+public class Eiszeit {
     public static List<Set<Integer>> setCover(int[][] input) {
         Graph<Integer> graph = new Graph<>(input);
         List<Set<Integer>> result = new ArrayList<>();
