@@ -25,10 +25,24 @@
 - Anzahl an benötigten Mitarbeiter
 
 ## Was sind die Eingaben?
-
-- Matrix mit Mitarbeiter und Projekt (Wer kann was machen?)
-- Anzahl der benötigten Mitarbeiter für die Projekte
-
+- Zwei Arrays: 
+  - Zweidimensionales Array, die Informationen über die Kompetenzen der Mitarbeiter und der Projekte enthält
+    - Beispiel/ Aufbau Matrix:
+      
+        |        | Projekt 1 | Projekt 2 | Projekt ...|
+        |-----------------|-----------|-----------|---|
+        | Mitarbeiter 1   | 1         | 0         |...
+        | Mitarbeiter 2   | 1         | 1         |...
+        | Mitarbeiter ... | 0         | 1         |...
+       
+    - Eindimensionales Array, die Informationen über die gewünschte Anzahl an Mitarbeitern pro Projekt enthält
+      - Beispiel/ Aufbau Array:
+    
+        | Projekt 1 | Projekt 2 | Projekt 3 | Projekt ... |
+        |-----------|-----------|-----------|-------------|
+        | 3         | 2    | 5         | ...         |
+   
+  
 
 ## Was sind die Ausgaben?
 
@@ -42,8 +56,9 @@ Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in dere
 - Stable Marriage Algorithm
 
 ## Welche Datenstruktur eignet sich?
-
-
+- Benutzte Datenstrukturen: 
+  - Array
+  - List
 
 ## Was ist die Laufzeit?
 

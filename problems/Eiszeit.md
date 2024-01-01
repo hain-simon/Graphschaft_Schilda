@@ -22,7 +22,7 @@
 
 ## Was sind die Eingaben?
 
-- Eingabe in den ALgorithmus ist ein ungerichteter und ungewichteter Graph in Form einer zweidimensionalen Adjazenzmatrix.
+- Eingabe in den Algorithmus ist ein ungerichteter und ungewichteter Graph in Form einer zweidimensionalen Adjazenzmatrix.
 
 
 ## Was sind die Ausgaben?
@@ -62,5 +62,8 @@
 ## Welches algorithmische Problem?
 - Das Set - Cover Problem ist ein klassisches NP vollständiges Problem. Es ist schwierig, eine optimale Lösung in polynomieller Zeit zu finden. Eine gegebene Lösung lässt sich allerdings schnell überprüfen. 
 ## Was ist die Laufzeit?
-
+- Laufzeit ist abhängig von folgenden Komponenten:
+    1) Anzahl der Knoten im Graph: N 
+    1)  Anzahl der Kanten im Graph: M
+- Laufzeit: O(N * M)
 

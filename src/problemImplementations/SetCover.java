@@ -35,17 +35,10 @@ public class SetCover {
             }
         }
 
-        printInput(input);
-        System.out.println("Man benötigt "+result.size()+ " Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände effizient durchzusetzen.");
-        System.out.println();
-        System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
-        for (int i = 0; i < result.size(); i++) {
-            //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
-            System.out.println("Kreuzung "+ (i+1) + ": deckt folgenden Kreuzungen ab: " + result.get(i));
-        }
+        print(input,result);
         return result;
     }
-    public static void printInput(int[][] input) {
+    public static void print(int[][] input, List<Set<Integer>> result) {
         System.out.println("Input Matrix:");
         for (int i = 0; i < input.length; i++) {
             for (int j = 0; j < input[i].length; j++) {
@@ -54,6 +47,13 @@ public class SetCover {
             System.out.println();
         }
         System.out.println();
+        System.out.println("Man benötigt "+result.size()+ " Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände effizient durchzusetzen.");
+        System.out.println();
+        System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
+        for (int i = 0; i < result.size(); i++) {
+            //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
+            System.out.println("Kreuzung "+ (i+1) + ": deckt folgenden Kreuzungen ab: " + result.get(i));
+        }
     }
 }
 
