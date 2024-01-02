@@ -62,8 +62,15 @@
 ## Welches algorithmische Problem?
 - Das Set - Cover Problem ist ein klassisches NP vollständiges Problem. Es ist schwierig, eine optimale Lösung in polynomieller Zeit zu finden. Eine gegebene Lösung lässt sich allerdings schnell überprüfen. 
 ## Was ist die Laufzeit?
-- Laufzeit ist abhängig von folgenden Komponenten:
-    1) Anzahl der Knoten im Graph: N 
-    1)  Anzahl der Kanten im Graph: M
-- Laufzeit: O(N * M)
+- Laufzeit ist abhängig von folgenden Komponenten: 
+  1) Anzahl der Knoten im Graph: N
+  2) Anzahl der Kanten im Graph: M
+- Laufzeit: O(N + M)
+- Warum? 
+  - for - Schleife in Z.14: Nur Abhängig von N
+  - while - Schleife in Z.19: Nur Abhängig von N
+  - for - Schleife in Z.25: Nur Abhängig von M 
+  - danach werden nur noch Standardoperatoren benutzt (Bspw.: if - Bedingungen)
+  
+  > Gesamtlaufzeit: O(2N + M) = O(N + M)
 
