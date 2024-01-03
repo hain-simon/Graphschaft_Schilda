@@ -51,15 +51,22 @@ Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in dere
 
 ## Welcher Algorithmus eignet sich?
 
-- Bipartierter Graph
-
-- Stable Marriage Algorithm
+- Eigens erstellter Algorithmus: Mitarbeiter-zu-Projekt-Zuordnungsalgorithmus, welcher mithilfe einer angebeben maximalen Anzahl an Mitarbeitern pro Projekt und den Kompenenten der Mitarbeiter im Vergleich zu den benötigten Kompetenzen für ein Projekt, alle Mitarbeiter den Projekten zuordnet.
 
 ## Welche Datenstruktur eignet sich?
 - Benutzte Datenstrukturen: 
   - Array
   - List
+> Beide Datenstrukturen helfen die Datenstruktur bipartiter Graph (Hier: Zeilen = Mitarbeter; Spalten = Projekte) umzusetzen
 
 ## Was ist die Laufzeit?
+- Die Laufzeit dieses Algorithmus ist abhängig von folgenden Komponenten: 
+  - Anzahl der Mitarbeiter: M
+  - Anzahl der Projekte: P
+- Analyse des Algorithmus: 
+  - äußere for - Schleife: O(P)
+  - innnere for - Schleife: O(M) 
+  - Mischen der Liste mitarbeiterMitKompetenzen der Länge L: O(L) --> L: durchschnittliche Länge der Liste 
 
+>Insgesamt beträgt die Laufzeitkomplexität O(P * (M + L))
 

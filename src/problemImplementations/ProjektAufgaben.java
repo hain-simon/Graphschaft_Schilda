@@ -58,7 +58,6 @@ public class ProjektAufgaben {
             System.out.println();
         }
     }
-
 }
 
 
