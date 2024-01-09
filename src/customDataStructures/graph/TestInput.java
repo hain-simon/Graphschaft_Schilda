@@ -56,7 +56,7 @@ public class TestInput {
         };
         return kompetenzenMatrix;
     }
-    public static int[] getmitarbeiterProProjekt(){
+    public static int[] getMitarbeiterProProjekt(){
         int[] array = {2, 1, 4, 1, 2, 2};
         return array;
     }
