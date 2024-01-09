@@ -8,7 +8,7 @@ public class Main {
         //Winterwege.solve(TestInput.getUndirectedGraph1());
         //Eiszeit.setCover(TestInput.getUndirectedGraph2());
         //AktivitätsDiagramm.solve(TestInput.getDirectedGraph1());
-        ProjektAufgaben.matchMitarbeiterProjekte(TestInput.getKompetenzenmatrix(), TestInput.getMitarbeiterProProjekt());
+        ProjektAufgaben.matchMitarbeiterProjekte(TestInput.getKompetenzenmatrix2(), TestInput.getMitarbeiterProProjekt2());
 
         //HistorischeFunde.solve(TestInput.getUndirectedGraph2());
     }
