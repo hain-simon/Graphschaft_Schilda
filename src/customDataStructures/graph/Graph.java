@@ -5,22 +5,22 @@ import java.util.*;
 
 public class Graph <T> {
 
-    int[][] input;
+    public int[][] graphArr;
 
     //List of all Vertices
     public List<Vertex<T>> vertices = new ArrayList<>();
     private List<Set<Integer>> kanten;
 
     //Initialize Graph with input
-    public Graph(int[][] input) {
+    public Graph(int[][] graphArr) {
 
-        initializeVertices(input);
-        erstelleKantenListe(input);
+        initializeVertices(graphArr);
+        erstelleKantenListe(graphArr);
     }
 
     private void initializeVertices(int[][] input) {
 
-        this.input = input;
+        this.graphArr = input;
 
         //First a vertex is created for each row in input
         for (int i = 0; i < input.length; i++) {
@@ -52,7 +52,7 @@ public class Graph <T> {
     }
 
     public int getVertices() {
-        return input.length;
+        return graphArr.length;
     }
 
 
