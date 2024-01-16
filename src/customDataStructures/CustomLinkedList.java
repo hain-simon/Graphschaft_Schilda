@@ -1,9 +1,12 @@
 package customDataStructures;
 
+
+// TODO: Implement poll(),
+
 public class CustomLinkedList<T>{
 
     Node<T> headNode;
-    int size = 0;
+    public int size = 0;
 
     private void checkOutOfBounds(int index){
         //If index is out of Bound, throw error
