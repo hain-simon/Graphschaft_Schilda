@@ -26,11 +26,27 @@
 
 ## Was sind die Eingaben? 
   - Ein Zweidimensionales Array, welches Informationen über die Kompetenzen der Mitarbeiter und der Projekte enthält
-    - Beispiel/ Aufbau Matrix:
+    - Aufbau Matrix:
       ![img_1.png](img_1.png)
         
   - Erklärung Der Input Matrix: 
- 
+    - Q: Superquelle, hat nur Verbindungen zu den Mitarbeitern, Falls Verbindung besteht, Gewichtet mit 3, da ein Mitarbeiter max. 3 Projekte gleichzeitig bearbeiten darf
+    - S: Supersenke, Verbinndungen von jedem Projekt zu der Supersenke. gewicht gibt an, wie viel ein Projekt minimal an Mitarbeitern benötigt 
+    - M...: steht hier für Mitarbeiter 
+    - P...: steht hier für Projekt 
+      - Beispiel input: 
+        - int[][] graphArr = new int[][]{
+        - {0, 3, 3, 3, 0, 0, 3, 0, 0, 0}, 
+        - {0, 0, 0, 0, 1, 1, 0, 1, 1, 0}, 
+        - {0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+        - {0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+        - {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+        - {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+        - {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+        - {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+        - {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+        - {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        - };
 
 ## Was sind die Ausgaben?
 
@@ -48,10 +64,16 @@ Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in dere
 - Anhand des Flowgraphen, können dann die einzelnen Zuordnungen ausgelesen werden und in ein geordnetes zweidimensionales Array eingefügt werden. 
 ## Welche Datenstruktur eignet sich?
 - Benutzte Datenstrukturen: 
-  - Array
+  - Array 
   - List
 > Beide Datenstrukturen helfen die Datenstruktur bipartiter Graph (Hier: Zeilen = Mitarbeter; Spalten = Projekte) umzusetzen
 
 ## Was ist die Laufzeit?
-
-
+- Die Laufzeit des Ford Fulkerson Algorithmus ist abhängig von der Anzahl der Kanten und Knoten im Graphen. 
+  - Ford Fulkerson Alg.:  O(|E| * f) 
+    - |E|: Anzahl Kanten im Graphen 
+    - f: maximaler Flusswert 
+  - Methode projekteZuteilen: O(m*n);
+    - m: Anzahl Mitarbeiter 
+    - n: Anzahl Projekte 
+>Gesamtlaufzeit: O(|E| * f + m * n)
