@@ -5,11 +5,10 @@ import customDataStructures.graph.Vertex;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 public class FordFulkerson {
 
-    public static int getMaxFlow(Graph<Integer> graph, Vertex<Integer> start, Vertex<Integer> end){
+    public static maxFlowSolution getMaxFlow(Graph<Integer> graph, Vertex<Integer> start, Vertex<Integer> end){
         int[][] graphArr = graph.graphArr;
         int size = graphArr.length;
         int startNum = graph.vertices.indexOf(start);
@@ -43,7 +42,18 @@ public class FordFulkerson {
             }
             maxFlow += pathFlow;
         }
-        return maxFlow;
+
+        //calculate flows
+        int[][] flow = new int[size][size];
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                if(graphArr[i][j] > 0) flow[i][j] = graphArr[i][j] - residual[i][j];
+                else flow[i][j] = 0;
+
+            }
+        }
+
+        return new maxFlowSolution(maxFlow, residual, flow);
     }
 
     private static boolean bfs(int[][] residual, int start, int end, int[] parent){
@@ -81,4 +91,17 @@ public class FordFulkerson {
         //end has not been reached
         return false;
     }
+
+    public static class maxFlowSolution{
+        int maxFlow;
+        int[][] residuals;
+        int[][] flowGraph;
+
+        public maxFlowSolution(int maxFlow, int[][] residuals, int[][] flowGraph) {
+            this.maxFlow = maxFlow;
+            this.residuals = residuals;
+            this.flowGraph = flowGraph;
+        }
+    }
 }
+

@@ -1,4 +1,6 @@
 package problemImplementations;
+import customDataStructures.FordFulkerson.maxFlowSolution;
+
 import java.util.*;
 
 public class ProjektAufgaben {
@@ -57,5 +59,6 @@ public class ProjektAufgaben {
             }
             System.out.println();
         }
+        maxFlowSolution test;
     }
 }
