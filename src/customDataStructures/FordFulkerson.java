@@ -93,9 +93,9 @@ public class FordFulkerson {
     }
 
     public static class maxFlowSolution{
-        int maxFlow;
-        int[][] residuals;
-        int[][] flowGraph;
+        public int maxFlow;
+        public int[][] residuals;
+        public int[][] flowGraph;
 
         public maxFlowSolution(int maxFlow, int[][] residuals, int[][] flowGraph) {
             this.maxFlow = maxFlow;
