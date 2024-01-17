@@ -15,44 +15,36 @@
   Projekte bearbeitet, bittet die Stadt Schilda Sie ein Planungstool für
   das Matching zwischen Mitarbeiter:innen und Projekten zu erstellen.
 
-
-## Notizen
-
+  
 ## Welche Daten sollen verarbeitet werden?
 
 - Mitarbeiter mit Kompetenzen
-- Projekte mit Bereich
-- Anzahl an benötigten Mitarbeiter
+- Projekte mit Kompetenzbereich 
+- Anzahl an benötigten Mitarbeiter pro Projekt 
 
-## Was sind die Eingaben?
-- Zwei Arrays: 
-  - Zweidimensionales Array, die Informationen über die Kompetenzen der Mitarbeiter und der Projekte enthält
+        All diese Daten werden in einer Adjazenzmatrix gespeichert -> siehe Eingabe 
+
+## Was sind die Eingaben? 
+  - Ein Zweidimensionales Array, welches Informationen über die Kompetenzen der Mitarbeiter und der Projekte enthält
     - Beispiel/ Aufbau Matrix:
-      
-        |        | Projekt 1 | Projekt 2 | Projekt ...|
-        |-----------------|-----------|-----------|---|
-        | Mitarbeiter 1   | 1         | 0         |...
-        | Mitarbeiter 2   | 1         | 1         |...
-        | Mitarbeiter ... | 0         | 1         |...
-       
-    - Eindimensionales Array, die Informationen über die gewünschte Anzahl an Mitarbeitern pro Projekt enthält
-      - Beispiel/ Aufbau Array:
-    
-        | Projekt 1 | Projekt 2 | Projekt 3 | Projekt ... |
-        |-----------|-----------|-----------|-------------|
-        | 3         | 2    | 5         | ...         |
-   
-  
+      ![img_1.png](img_1.png)
+        
+  - Erklärung Der Input Matrix: 
+ 
 
 ## Was sind die Ausgaben?
 
 Die Ausgabe ist ein zweidimensionales Array. Jede Zeile entspricht ein Mitarbeiter. Jede Spalte entspricht ein Projekt. 
-Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in deren Kruezfeld 1. Wenn ein Mitarbeiter und ein Projekt nicht diegleichen Kompetenzen haben, so ist der Wert in ihrem Schnittfeld 0. 
+Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in deren Kreuzfeld 1. Wenn ein Mitarbeiter dem jeweiligen Projekt nicht zugeordnet ist, da die benötigten Kompetenzen nicht übereinstimmen, so befindet sich in deren Schnittfeld eine 0.
+- Beispiel Output Matrix: 
+
+    ![img_2.png](img_2.png)
 
 ## Welcher Algorithmus eignet sich?
 
-- Eigens erstellter Algorithmus: Mitarbeiter-zu-Projekt-Zuordnungsalgorithmus, welcher mithilfe einer angebeben maximalen Anzahl an Mitarbeitern pro Projekt und den Kompenenten der Mitarbeiter im Vergleich zu den benötigten Kompetenzen für ein Projekt, alle Mitarbeiter den Projekten zuordnet.
-
+- Für diese Aufgabe eignet sich der Ford Fulkerson Algorithmus, der den maximalen Fluss eines Graphen berechnet. 
+- Unsere Klasse Ford Fulkerson gibt einen MaxFlow int - Wert aus, sowei einen Flowgraph und einen Restgraph des Datentyps graph zurück.
+- Anhand des Flowgraphen, können dann die einzelnen Zuordnungen ausgelesen werden und in ein geordnetes zweidimensionales Array eingefügt werden. 
 ## Welche Datenstruktur eignet sich?
 - Benutzte Datenstrukturen: 
   - Array
@@ -60,13 +52,5 @@ Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in dere
 > Beide Datenstrukturen helfen die Datenstruktur bipartiter Graph (Hier: Zeilen = Mitarbeter; Spalten = Projekte) umzusetzen
 
 ## Was ist die Laufzeit?
-- Die Laufzeit dieses Algorithmus ist abhängig von folgenden Komponenten: 
-  - Anzahl der Mitarbeiter: M
-  - Anzahl der Projekte: P
-- Analyse des Algorithmus: 
-  - äußere for - Schleife: O(P)
-  - innnere for - Schleife: O(M) 
-  - Mischen der Liste mitarbeiterMitKompetenzen der Länge L: O(L) --> L: durchschnittliche Länge der Liste 
 
->Insgesamt beträgt die Laufzeitkomplexität O(P * (M + L))
 
