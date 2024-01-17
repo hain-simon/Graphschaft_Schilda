@@ -26,6 +26,22 @@ public class TestInput {
         return graphArr;
     }
 
+    public static int[][] getFordFulkersonGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 3, 3, 3, 0, 0, 3, 0, 0, 0}, //Vertex 0 has connection to Vertex 1 with weight 7, Vertex 3 with weight 2 ...
+                {0, 0, 0, 0, 1, 1, 0, 1, 1, 0}, //Vertex 1 has connection to Vertex 0 with weight 7 ....
+                {0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+                {0, 0, 0, 0, 1, 1, 0, 1, 1, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 3},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        };
+        return graphArr;
+    }
+
 
 
     public static int[][] getDirectedGraph1(){

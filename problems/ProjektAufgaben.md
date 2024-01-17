@@ -36,9 +36,10 @@
 
 Die Ausgabe ist ein zweidimensionales Array. Jede Zeile entspricht ein Mitarbeiter. Jede Spalte entspricht ein Projekt. 
 Falls ein Mitarbeiter einem Projekt zugeordnet ist, so beträgt der Wert in deren Kreuzfeld 1. Wenn ein Mitarbeiter dem jeweiligen Projekt nicht zugeordnet ist, da die benötigten Kompetenzen nicht übereinstimmen, so befindet sich in deren Schnittfeld eine 0.
-- Beispiel Output Matrix: 
+- Beispiel Output :
 
-    ![img_2.png](img_2.png)
+
+  ![img_3.png](img_3.png)
 
 ## Welcher Algorithmus eignet sich?
 
