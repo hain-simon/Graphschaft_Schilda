@@ -21,3 +21,9 @@
 - Louis: Anpassung ProjektAufgaben
 - Joshua: Testing
 - Simon: Ford Fulkerson-Algorithmus
+
+## Sprint 4: 16.01.2024
+### Arbeitseeinteilung
+- Louis: ProjektAufgaben fertigstellen
+- Joshua: Weiteres Testen, Testmatrizen erstellen
+- Simon: CustomLinkedList und CustomArrayList fertigstellen
