@@ -1,4 +1,6 @@
 package problemImplementations;
+import customDataStructures.CustomArrayList;
+import customDataStructures.CustomLinkedList;
 import customDataStructures.FordFulkerson;
 import customDataStructures.FordFulkerson.maxFlowSolution;
 import customDataStructures.graph.Graph;
@@ -7,8 +9,8 @@ import java.util.*;
 
 public class ProjektAufgaben {
     //Deklarieren der Liste Mitarbeiter, der Liste projekte und des Arrays zuordnung
-    private static List<Integer> mitarbeiter = new ArrayList<>();
-    private static List<Integer> projekte = new ArrayList<>();
+    private static CustomArrayList<Integer> mitarbeiter = new CustomArrayList<>();
+    private static CustomArrayList<Integer> projekte = new CustomArrayList<>();
     //zuordnung Array ist das Array, in welchem am Ende das Ergebnis gespeichert ist
     private static int[][] zuordnung;
 
@@ -40,7 +42,7 @@ public class ProjektAufgaben {
         //Auslesen aus flowArray, welcher Mitarbeiter welches Projekt bearbeitet und speicher in zuordnung
         for(int i=0; i<mitarbeiter.size(); i++){
             for (int a=0; a<projekte.size(); a++){
-                if (flowArray[mitarbeiter.get(i)][projekte.get(a)] >0){
+                if (flowArray[mitarbeiter.get(i+1)][projekte.get(a+1)] >0){
                     zuordnung[i][a] = 1;
                 }
             }

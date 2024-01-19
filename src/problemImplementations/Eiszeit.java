@@ -1,13 +1,17 @@
 package problemImplementations;
+import customDataStructures.CustomArrayList;
+import customDataStructures.CustomLinkedList;
 import customDataStructures.graph.*;
 
 import java.util.*;
 
 public class Eiszeit {
-    public static List<Set<Integer>> setCover(int[][] input) {
+    public static CustomArrayList<Set<Integer>> setCover(int[][] input) {
         //Deklarieren und Initialisieren eines Graphes, einer Liste result und einem Set remainingVertices
         Graph<Integer> graph = new Graph<>(input);
-        List<Set<Integer>> result = new ArrayList<>();
+        //List<Set<Integer>> result = new ArrayList<>();
+        CustomArrayList<Set<Integer>> result = new CustomArrayList<>();
+
         Set<Integer> remainingVertices = new HashSet<>();
 
         //Initialsierung des Sets remainingVertices; Nach der Inititialisierung befinden sich alle Knoten des Graphen im Set remainingVertices
@@ -49,7 +53,7 @@ public class Eiszeit {
     }
 
     //Methode, um die Input Matrix auszugeben, sowie die Lösungsliste
-    public static void print(int[][] input, List<Set<Integer>> result) {
+    public static void print(int[][] input, CustomArrayList<Set<Integer>> result) {
         System.out.println("Input Matrix:");
         for (int i = 0; i < input.length; i++) {
             for (int j = 0; j < input[i].length; j++) {
@@ -63,7 +67,9 @@ public class Eiszeit {
         System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
         for (int i = 0; i < result.size(); i++) {
             //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
-            System.out.println("Kreuzung "+ (i+1) + ": deckt folgenden Kreuzungen ab: " + result.get(i));
+            System.out.println("Kreuzung "+ (i+1) + ": deckt folgenden Kreuzungen ab: " + result.get(i+1));
         }
+
+
     }
 }
