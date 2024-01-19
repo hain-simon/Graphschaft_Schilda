@@ -64,24 +64,7 @@ public class CustomArrayList <T> {
         }
         arr = newArr;
     }
-    public boolean remove(Object obj) {
-        int index = indexOf(obj);
 
-        if (index >= 0) {
-            // Verschieben Sie die Elemente nach dem zu entfernenden Element
-            for (int i = index; i < size - 1; i++) {
-                arr[i] = arr[i + 1];
-            }
-
-            // Setzen Sie das letzte Element auf null und reduzieren Sie die Größe
-            arr[size - 1] = null;
-            size--;
-
-            return true;
-        } else {
-            return false;
-        }
-    }
 
 
 }
