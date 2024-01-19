@@ -1,5 +1,7 @@
 package customDataStructures.graph;
 
+import customDataStructures.CustomArrayList;
+
 import java.util.ArrayList;
 import java.util.List;
 

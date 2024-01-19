@@ -1,5 +1,7 @@
 package customDataStructures.graph;
 
+import customDataStructures.CustomArrayList;
+
 import java.util.ArrayList;
 import java.util.*;
 
@@ -61,7 +63,7 @@ public class Graph <T> {
     }
 
     public void erstelleKantenListe(int[][] input) {
-        this.kanten = new ArrayList<>(input.length);
+        this.kanten = new ArrayList<>();
 
         for (int i = 0; i < input.length; i++) {
             kanten.add(new HashSet<>());

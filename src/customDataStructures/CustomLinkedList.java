@@ -14,6 +14,13 @@ public class CustomLinkedList<T>{
             throw new IndexOutOfBoundsException("Index: " + index + " is out of Bounds!");
         }
     }
+
+    public T poll(){
+        if (size == 0) return null;
+        T ans = headNode.value;
+        remove(0);
+        return ans;
+    }
     public void add(T value){
         //If CustomLinedList is empty, set the headNode to a new Vertex with value
         if(size == 0){
