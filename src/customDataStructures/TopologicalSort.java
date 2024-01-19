@@ -4,15 +4,12 @@ import customDataStructures.graph.Edge;
 import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TopologicalSort {
-    List<Vertex<Integer>> verticesWithoutPermanentMark = new ArrayList<>();
-    List<Vertex<Integer>> verticesWithTemporaryMark = new ArrayList<>();
-    List<Vertex<Integer>> order = new ArrayList<>();
+    CustomArrayList<Vertex<Integer>> verticesWithoutPermanentMark = new CustomArrayList<>();
+    CustomArrayList<Vertex<Integer>> verticesWithTemporaryMark = new CustomArrayList<>();
+    CustomArrayList<Vertex<Integer>> order = new CustomArrayList<>();
     public int[] solve(Graph<Integer> graph){
-        List<Vertex<Integer>> vertices = graph.vertices;
+        CustomArrayList<Vertex<Integer>> vertices = graph.vertices;
         int vertexCount = vertices.size();
 
 

@@ -4,9 +4,6 @@ import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 import customDataStructures.Prim;
 
-import java.util.List;
-import java.util.ArrayList;
-
 public class Winterwege {
 
     public static int[][] solve(int[][] input) {

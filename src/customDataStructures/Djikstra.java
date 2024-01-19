@@ -4,14 +4,12 @@ import customDataStructures.graph.Edge;
 import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Djikstra {
 
     public static int[] solve(Graph<Integer> graph){
 
-        List<Vertex<Integer>> vertices = graph.vertices;
+        CustomArrayList<Vertex<Integer>> vertices = graph.vertices;
 
         int vertexCount = vertices.size();
         int[] ans = new int[vertexCount];
@@ -24,7 +22,7 @@ public class Djikstra {
         //First vertex is start
         Vertex<Integer> startVertex = vertices.get(0);
 
-        List<Vertex<Integer>> visitedVertices = new ArrayList<>();
+        CustomArrayList<Vertex<Integer>> visitedVertices = new CustomArrayList<>();
 
         //Set distance of start to 0 and add to visitedVertices
         startVertex.value = 0;
@@ -52,7 +50,7 @@ public class Djikstra {
 
     }
 
-    private static Vertex<Integer> getShortestDistanceVertex(List<Vertex<Integer>> visitedVertices) {
+    private static Vertex<Integer> getShortestDistanceVertex(CustomArrayList<Vertex<Integer>> visitedVertices) {
         Vertex<Integer> shortestVertex = null;
         int shortestDistance = Integer.MAX_VALUE;
         //For each vertex

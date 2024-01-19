@@ -4,7 +4,7 @@ import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 
 import java.util.Arrays;
-import java.util.LinkedList;
+import customDataStructures.CustomLinkedList;
 
 public class FordFulkerson {
 
@@ -62,8 +62,7 @@ public class FordFulkerson {
         boolean[] visited = new boolean[size];
         Arrays.fill(visited, false);
 
-        // TODO: Implement customLinkedList.poll(), update Class used here
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        CustomLinkedList<Integer> queue = new CustomLinkedList<>();
         queue.add(start);
         visited[start] = true;
         parent[start] = -1; // start has no parent

@@ -4,9 +4,6 @@ import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 import customDataStructures.graph.Edge;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Prim {
 
     public static int[][] solve(Graph<Integer> graph){
@@ -20,12 +17,12 @@ public class Prim {
                 -remember this edge
          */
 
-        List<Vertex<Integer>> vertices = graph.vertices;
+        CustomArrayList<Vertex<Integer>> vertices = graph.vertices;
         int vertexCount = vertices.size();
 
         int[][] ans = new int[vertexCount][vertexCount];
 
-        List<Vertex<Integer>> visitedVertices = new ArrayList<>();
+        CustomArrayList<Vertex<Integer>> visitedVertices = new CustomArrayList<>();
 
         //Start at vertex 0
         visitedVertices.add(vertices.get(0));
@@ -51,7 +48,7 @@ public class Prim {
         return ans;
     }
 
-    private static Edge<Integer> getShortestEdge(List<Vertex<Integer>> visitedVertices) {
+    private static Edge<Integer> getShortestEdge(CustomArrayList<Vertex<Integer>> visitedVertices) {
         Edge<Integer> shortestEdge = null;
         //For each vertex
         for(Vertex<Integer> vertex : visitedVertices){

@@ -1,8 +1,6 @@
 package customDataStructures;
 
 
-// TODO: Implement poll(),
-
 public class CustomLinkedList<T>{
 
     Node<T> headNode;
@@ -13,6 +11,10 @@ public class CustomLinkedList<T>{
         if(index < 0 || index >= size){
             throw new IndexOutOfBoundsException("Index: " + index + " is out of Bounds!");
         }
+    }
+
+    public boolean isEmpty(){
+        return size==0;
     }
 
     public T poll(){

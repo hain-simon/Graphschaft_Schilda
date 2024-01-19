@@ -1,17 +1,16 @@
 package customDataStructures.graph;
 
 import customDataStructures.CustomArrayList;
-
-import java.util.ArrayList;
-import java.util.*;
+import java.util.Set;
+import java.util.HashSet;
 
 public class Graph <T> {
 
     public int[][] graphArr;
 
     //List of all Vertices
-    public List<Vertex<T>> vertices = new ArrayList<>();
-    private List<Set<Integer>> kanten;
+    public CustomArrayList<Vertex<T>> vertices = new CustomArrayList<>();
+    private CustomArrayList<Set<Integer>> kanten;
 
     //Initialize Graph with input
     public Graph(int[][] graphArr) {
@@ -58,12 +57,12 @@ public class Graph <T> {
     }
 
 
-    public List<Set<Integer>> getEdges() {
+    public CustomArrayList<Set<Integer>> getEdges() {
         return kanten;
     }
 
     public void erstelleKantenListe(int[][] input) {
-        this.kanten = new ArrayList<>();
+        this.kanten = new CustomArrayList<>();
 
         for (int i = 0; i < input.length; i++) {
             kanten.add(new HashSet<>());
