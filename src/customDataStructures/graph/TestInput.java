@@ -92,6 +92,18 @@ public class TestInput {
         int[] array = {3, 3, 3, 1};
         return array;
     }
+    public static int[][] getUndirectedGraph5(){
+        int[][] kompetenzenMatrix = {
+                {0,0,1,1,1,0,1},
+                {0,0,1,1,0,0,1},
+                {1,1,0,1,1,1,1},
+                {1,1,1,0,0,0,1},
+                {1,0,1,0,0,1,0},
+                {0,0,1,0,1,0,0},
+                {1,1,1,1,0,0,0}
+                };
+        return kompetenzenMatrix;
+    }
 }
 
 /*
