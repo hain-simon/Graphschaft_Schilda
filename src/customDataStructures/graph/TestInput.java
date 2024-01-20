@@ -217,6 +217,8 @@ public class TestInput {
         };
         return kompetenzenMatrix;
     }
+}
+
 /*
                 {0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0},
