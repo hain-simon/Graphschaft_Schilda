@@ -92,7 +92,7 @@ public class TestInput {
         int[] array = {3, 3, 3, 1};
         return array;
     }
-    public static int[][] getUndirectedGraph5(){
+    public static int[][] getUndirectedGraph4(){
         int[][] kompetenzenMatrix = {
                 {0,0,1,1,1,0,1},
                 {0,0,1,1,0,0,1},
@@ -104,8 +104,119 @@ public class TestInput {
                 };
         return kompetenzenMatrix;
     }
+
+    public static int[][] getUndirectedGraph3(){
+        int[][] kompetenzenMatrix = {
+                {0,1,1,0},
+                {1,0,1,1},
+                {1,1,0,1},
+                {0,1,1,0}
+        };
+        return kompetenzenMatrix;
 }
 
+    public static int[][] getUndirectedGraph5() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 1, 0, 0, 0, 0, 0},
+                {1, 0, 1, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 0, 0, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+                {1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 1, 0, 0, 0, 0, 0, 1, 0},
+                {0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0, 1, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0}
+        };
+        return kompetenzenMatrix;
+    }
+
+    public static int[][] getDirectedGraph4() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 2, 0, 0, 0, 0, 0},
+                {0, 0, 3, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 4, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 5, 0, 0},
+                {0, 0, 0, 0, 0, 6, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 7, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 8},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 9},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
+        return kompetenzenMatrix;
+    }
+
+    public static int[][] getDirectedGraph3() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 2, 0, 0},
+                {0, 0, 3, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 4},
+                {0, 0, 0, 0, 5, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 6, 0}
+        };
+        return kompetenzenMatrix;
+    }
+
+    public static int[][] directedGewichtet2() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 2, 0, 0, 0, 0, 0},
+                {1, 0, 3, 0, 0, 0, 0, 0, 0, 0},
+                {0, 3, 0, 0, 0, 0, 4, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 5, 0, 0},
+                {2, 0, 0, 0, 0, 6, 0, 0, 0, 0},
+                {0, 0, 0, 0, 6, 0, 0, 0, 0, 0},
+                {0, 0, 4, 0, 0, 0, 0, 0, 7, 0},
+                {0, 0, 0, 5, 0, 0, 0, 0, 0, 8},
+                {0, 0, 0, 0, 0, 0, 7, 0, 0, 9},
+                {0, 0, 0, 0, 0, 0, 0, 8, 9, 0}
+        };
+        return kompetenzenMatrix;
+    }
+
+    public static int[][] directedGewichtet1() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 2, 0, 0},
+                {0, 0, 3, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 4},
+                {0, 0, 0, 0, 5, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 6, 0}
+        };
+        return kompetenzenMatrix;
+    }
+
+    public static int[][] UndirectedGewichtet1() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 2, 0, 0},
+                {1, 0, 3, 0, 0, 0, 0},
+                {0, 3, 0, 0, 0, 0, 4},
+                {0, 0, 0, 0, 5, 0, 0},
+                {2, 0, 0, 5, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 4, 0, 0, 0, 0}
+        };
+        return kompetenzenMatrix;
+    }
+
+    public static int[][] UndirectedGewichtet2() {
+        int[][] kompetenzenMatrix = {
+                {0, 1, 0, 0, 2, 0, 0, 0, 0, 0},
+                {1, 0, 3, 0, 0, 0, 0, 0, 0, 0},
+                {0, 3, 0, 0, 0, 0, 4, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 5, 0, 0},
+                {2, 0, 0, 0, 0, 6, 0, 0, 0, 0},
+                {0, 0, 0, 0, 6, 0, 0, 0, 0, 0},
+                {0, 0, 4, 0, 0, 0, 0, 0, 7, 0},
+                {0, 0, 0, 5, 0, 0, 0, 0, 0, 8},
+                {0, 0, 0, 0, 0, 0, 7, 0, 0, 9},
+                {0, 0, 0, 0, 0, 0, 0, 8, 9, 0}
+        };
+        return kompetenzenMatrix;
+    }
 /*
                 {0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0},
