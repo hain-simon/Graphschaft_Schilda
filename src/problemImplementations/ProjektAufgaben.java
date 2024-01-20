@@ -53,7 +53,7 @@ public class ProjektAufgaben {
         return zuordnung;
     }
 
-    //Ausgeben eines zweidimensionalen Arrays
+    //Ausgeben eines zweidimensionalen Arrays in der Konsole
     private static void printZuordnung(int [][] array ){
         System.out.print("                ");
         for (int a = 0; a< array[0].length; a++){
