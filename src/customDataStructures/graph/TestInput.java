@@ -61,37 +61,10 @@ public class TestInput {
 
 
 
-    public static int[][] getKompetenzenmatrix(){
-        int[][] kompetenzenMatrix = {
-                {1, 0, 1, 1, 0, 1},
-                {0, 1, 1, 0, 1, 1},
-                {1, 1, 1, 0, 1 , 1},
-                {0, 1, 0, 1, 0 , 1},
-                {0, 0, 1, 0, 1 , 0},
-                {1, 0, 1, 1, 0, 1}
-        };
-        return kompetenzenMatrix;
-    }
 
 
-    public static int[] getMitarbeiterProProjekt(){
-        int[] array = {2, 1, 4, 1, 2, 2};
-        return array;
-    }
 
-    public static int[][] getKompetenzenmatrix2(){
-        int[][] kompetenzMatrix = {
-                {1, 1, 1, 1},
-                {1, 1, 1, 1},
-                {1, 1, 1, 1},
-                {1, 0, 0, 0}
-        };
-        return  kompetenzMatrix;
-    }
-    public static int[] getMitarbeiterProProjekt2(){
-        int[] array = {3, 3, 3, 1};
-        return array;
-    }
+
     public static int[][] getUndirectedGraph4(){
         int[][] kompetenzenMatrix = {
                 {0,0,1,1,1,0,1},
@@ -227,12 +200,6 @@ public class TestInput {
                 {0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0}
 
-       public static int[][] getUndirectedGraoh5(){
-        int[][] kompetenzenMatrix = {
-                {0,0,1,1,1,0,1}.
-                {0,0,1,1,0,0,1},
-                {
-        };
-        return kompetenzenMatrix;
+
     }
  */
