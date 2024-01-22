@@ -62,15 +62,9 @@
 ## Welches algorithmische Problem?
 - Das Set - Cover Problem ist ein klassisches NP vollständiges Problem. Es ist schwierig, eine optimale Lösung in polynomieller Zeit zu finden. Eine gegebene Lösung lässt sich allerdings schnell überprüfen. 
 ## Was ist die Laufzeit?
-- Laufzeit ist abhängig von folgenden Komponenten: 
-  1) Anzahl der Knoten im Graph: N
-  2) Anzahl der Kanten im Graph: M
-- Laufzeit: O(N + M)
-- Warum? 
-  - for - Schleife in Z.14: Nur Abhängig von N
-  - while - Schleife in Z.19: Nur Abhängig von N
-  - for - Schleife in Z.25: Nur Abhängig von M 
-  - danach werden nur noch Standardoperatoren benutzt (Bspw.: if - Bedingungen)
-  
-  > Gesamtlaufzeit: O(2N + M) = O(N + M)
+- 
+Die Laufzeit des vorliegenden Algorithmus hängt von der Anzahl der Knoten (|V|) und Kanten (|E|) im Graphen ab. Die Schleife while (!remainingVertices.isEmpty()) wird höchstens |V| Iterationen durchlaufen, da in jeder Iteration mindestens ein Knoten aus remainingVertices entfernt wird. Die Methode getVertexWithMostConnections durchläuft alle verbleibenden Knoten und sucht nach dem Knoten mit den meisten ausgehenden Kanten, was O(|V|) Zeit in Anspruch nimmt. Innerhalb der Schleife wird ein Knoten und seine ausgehenden Kanten entfernt, wobei das Entfernen eines Knotens im Allgemeinen O(1) dauert und das Entfernen aller ausgehenden Kanten in O(k), wobei k die Anzahl der ausgehenden Kanten des entfernten Knotens ist.
+
+Zusammengefasst ergibt sich eine geschätzte Gesamtlaufzeit von O(|V|^2 + |E|). 
+
 
