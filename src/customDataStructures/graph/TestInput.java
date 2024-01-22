@@ -67,23 +67,23 @@ public class TestInput {
 
     public static int[][] getUndirectedGraph4(){
         int[][] kompetenzenMatrix = {
-                {0,0,1,1,1,0,1},
-                {0,0,1,1,0,0,1},
-                {1,1,0,1,1,1,1},
-                {1,1,1,0,0,0,1},
-                {1,0,1,0,0,1,0},
-                {0,0,1,0,1,0,0},
-                {1,1,1,1,0,0,0}
+                {1,0,1,1,1,0,1},
+                {0,1,1,1,0,0,1},
+                {1,1,0,1,0,1,0},
+                {1,1,1,1,0,0,1},
+                {1,0,1,0,1,1,0},
+                {0,0,1,0,1,1,0},
+                {1,1,1,1,0,0,1}
                 };
         return kompetenzenMatrix;
     }
 
     public static int[][] getUndirectedGraph3(){
         int[][] kompetenzenMatrix = {
-                {0,1,1,0},
-                {1,0,1,1},
-                {1,1,0,1},
-                {0,1,1,0}
+                {1,1,1,0},
+                {1,1,1,1},
+                {1,1,1,1},
+                {0,1,1,1}
         };
         return kompetenzenMatrix;
 }

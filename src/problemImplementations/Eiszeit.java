@@ -34,7 +34,9 @@ public class Eiszeit {
 
                 // Überprüfe, ob ein besserer Knoten mit mehr ausgehenden Kanten gefunden wurde und aktualisiere ihn gegebenenfalls
                 if (intersection.size() > coveredVertices.size()) {
+
                     coveredVertices = intersection;
+
                     bestSet = set;
 
                 }
@@ -46,14 +48,16 @@ public class Eiszeit {
             } else {
                 break;
             }
+            System.out.println("coveredVertices " + coveredVertices);
+            System.out.println("rem " + remainingVertices);
         }
         //Aufrufen der Methode print, um den Input und den Output auf der Konsole auszugeben
-        print(input,result);
+        print(input,result, graph);
         return result;
     }
 
     //Methode, um die Input Matrix auszugeben, sowie die Lösungsliste
-    public static void print(int[][] input, CustomArrayList<Set<Integer>> result) {
+    public static void print(int[][] input, CustomArrayList<Set<Integer>> result, Graph graph) {
         System.out.println("Input Matrix:");
         for (int i = 0; i < input.length; i++) {
             for (int j = 0; j < input[i].length; j++) {
@@ -67,7 +71,7 @@ public class Eiszeit {
         System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
         for (int i = 0; i < result.size(); i++) {
             //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
-            System.out.println("Kreuzung "+ (i) + ": deckt folgenden Kreuzungen ab: " + result.get(i));
+            System.out.println("Kreuzung "+ i + ": deckt folgenden Kreuzungen ab: " + result.get(i));
         }
 
 
