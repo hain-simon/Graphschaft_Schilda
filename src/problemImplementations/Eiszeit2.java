@@ -11,7 +11,7 @@ public class Eiszeit2 {
         CustomArrayList<Vertex<Integer>> setCover = SetCover.solve(graph);
         if(setCover == null) return;
 
-        System.out.print("Connections: ");
+        System.out.print("Vertices needed: ");
         for(Vertex<Integer> vertex : setCover){
             System.out.print(vertex.name + " ");
         }
