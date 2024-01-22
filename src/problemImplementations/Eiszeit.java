@@ -67,7 +67,7 @@ public class Eiszeit {
         System.out.println("Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:");
         for (int i = 0; i < result.size(); i++) {
             //System.out.println((i + 1) +". Knoten mit folgenden Kanten zu Knoten: " + selectedSets.get(i));
-            System.out.println("Kreuzung "+ (i+1) + ": deckt folgenden Kreuzungen ab: " + result.get(i+1));
+            System.out.println("Kreuzung "+ (i) + ": deckt folgenden Kreuzungen ab: " + result.get(i));
         }
 
 

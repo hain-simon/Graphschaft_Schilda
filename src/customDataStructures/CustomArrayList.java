@@ -1,9 +1,9 @@
 package customDataStructures;
 
+import java.util.AbstractList;
 import java.util.Iterator;
-import java.util.Objects;
 
-public class CustomArrayList <T> implements Iterable<T>{
+public class CustomArrayList <T> extends AbstractList<T>  implements Iterable<T>{
 
     private static final int DEFAULT_SIZE = 10;
     int size = 0;
@@ -13,13 +13,14 @@ public class CustomArrayList <T> implements Iterable<T>{
         arr = new Object[DEFAULT_SIZE];
     }
 
-    public void add(Object obj){
+    public boolean add(Object obj){
         size++;
         if(size >= arr.length){
             expandArr(arr.length * 2);
         }
 
         arr[size - 1] = obj;
+        return true;
     }
 
     public int size() {
@@ -43,30 +44,29 @@ public class CustomArrayList <T> implements Iterable<T>{
         }
     }
 
-    /**
-     * Removes the first occurence of the given Object in list
-     * @param item
-     */
-    public void remove(T item){
+    public boolean remove(Object item){
         int i = 0;
         while(i < size && arr[i] != item){
             i++;
         }
         //If it has not found anything, return
-        if(i == size) return;
+        if(i == size) return false;
         size--;
         while(i < size){
             arr[i] = arr[i + 1];
         }
+        return true;
     }
 
     public T get(int idx){
-        if(idx >= size) throw new IndexOutOfBoundsException();
+        if(idx >= size || idx < 0) throw new IndexOutOfBoundsException();
         return (T)arr[idx];
     }
 
-    public void set(int idx, Object obj){
+    public T set(int idx, T obj){
+        if(idx >= size || idx < 0) throw new IndexOutOfBoundsException();
         arr[idx] = obj;
+        return obj;
     }
 
     public Object[] toArray(){
@@ -116,7 +116,8 @@ class CustomIterator<T> implements Iterator<T>{
     @Override
     public T next() {
         if(!hasNext()) throw new IndexOutOfBoundsException();
-        current ++;
-        return list.get(current);
+        Object obj = list.get(current);
+        current++;
+        return (T)obj;
     }
 }
