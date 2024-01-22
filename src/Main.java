@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Winterwege.solve(TestInput.getUndirectedGraph3());
-        Eiszeit.setCover(TestInput.getUndirectedGraph3());
+        Eiszeit2.solve(TestInput.getUndirectedGraph3());
         //AktivitätsDiagramm.solve(TestInput.getDirectedGraph1());
         //ProjektAufgaben.projekteZuteilen(TestInput.getFordFulkersonGraph());
 

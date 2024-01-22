@@ -50,10 +50,11 @@ public class CustomArrayList <T> extends AbstractList<T>  implements Iterable<T>
             i++;
         }
         //If it has not found anything, return
-        if(i == size) return false;
+        if(i >= size) return false;
         size--;
         while(i < size){
             arr[i] = arr[i + 1];
+            i++;
         }
         return true;
     }
