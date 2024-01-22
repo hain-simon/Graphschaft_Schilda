@@ -19,6 +19,7 @@
 
 ## Welche Daten sollen verarbeitet werden?
 - Es sollen Daten eines Graphen, in form einer zweidimensionalen Matrix, bzw. einer Adjazenzliste verarbeitet werden.
+  - Der Datentyp dieses Arrays ist int. 
 
 ## Was sind die Eingaben?
 
@@ -27,28 +28,11 @@
 
 ## Was sind die Ausgaben?
 
-- Die Ausgabe dieser Klasse ist wie folgt aufgebaut: 
-  1. Adjazenzmatrix, die aus dem Graph erstellt wird 
-  2. Adjazenzliste, ebenfalss aus dem Graphen erstellt 
-  3. Lösungssets - Lösung zum Problem
-  4. Anzahl der Knoten, mit denen alle Kanten abgedeckt werden können 
+- Die Ausgabe beinhaltet alle Knoten, deren Kanten alle anderen Knoten abdecken. In der Ausgabe ist deutlich, welche Knoten mit deren Knotennummern wichtig sind, um alle Kanten zu überdecken. 
 
 
 - Beispielausgabe:
-
-      Input Matrix:
-      0 7 0 2 0 4
-      7 0 1 0 0 0
-      0 1 0 5 0 0
-      2 0 5 0 10 1
-      0 0 0 10 0 5
-      4 0 0 1 5 0
-
-      Man benötigt 2 Kreuzungen, um Schildas Grundrecht bezüglich der Eisstände effizient durchzusetzen.
-
-      Hier sind die Kreuzungen mit ihren jeweiligen verbundenen Kreuzungen:
-      Kreuzung 1: deckt folgenden Kreuzungen ab: [0, 2, 4, 5]
-      Kreuzung 2: deckt folgenden Kreuzungen ab: [1, 3, 5]
+  Vertices needed: Knoten 9; Knoten 6; Knoten 4; Knoten 1; Knoten 3;
 
 ## Welcher Algorithmus eignet sich?
 
