@@ -1,6 +1,7 @@
 package customDataStructures;
 
 import java.util.Iterator;
+import java.util.Objects;
 
 public class CustomArrayList <T> implements Iterable<T>{
 
@@ -18,7 +19,7 @@ public class CustomArrayList <T> implements Iterable<T>{
             expandArr(arr.length * 2);
         }
 
-        arr[size] = obj;
+        arr[size - 1] = obj;
     }
 
     public int size() {
@@ -60,6 +61,7 @@ public class CustomArrayList <T> implements Iterable<T>{
     }
 
     public T get(int idx){
+        if(idx >= size) throw new IndexOutOfBoundsException();
         return (T)arr[idx];
     }
 
