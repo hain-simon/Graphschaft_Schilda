@@ -13,7 +13,7 @@ public class Eiszeit2 {
 
         System.out.print("Vertices needed: ");
         for(Vertex<Integer> vertex : setCover){
-            System.out.print(vertex.name + " ");
+            System.out.print("Knoten " +vertex.name + "; ");
         }
     }
 }
