@@ -7,8 +7,7 @@ import customDataStructures.graph.Vertex;
 
 public class Djikstra {
 
-    public static int[] solve(Graph<Integer> graph){
-
+    public static CustomArrayList<Vertex<Integer>> getDistances(Graph<Integer> graph, Vertex<Integer> startVertex){
         CustomArrayList<Vertex<Integer>> vertices = graph.vertices;
 
         int vertexCount = vertices.size();
@@ -18,9 +17,6 @@ public class Djikstra {
         for(Vertex<Integer> vertex : vertices){
             vertex.value = Integer.MAX_VALUE;
         }
-
-        //First vertex is start
-        Vertex<Integer> startVertex = vertices.get(0);
 
         CustomArrayList<Vertex<Integer>> visitedVertices = new CustomArrayList<>();
 
@@ -40,12 +36,18 @@ public class Djikstra {
 
         }
 
+        return visitedVertices;
+    }
 
+    public static int[] solve(Graph<Integer> graph){
+
+        CustomArrayList<Vertex<Integer>> visitedVertices = getDistances(graph, graph.vertices.get(0));
+        int vertexCount = graph.vertices.size();
+        int[] ans = new int[vertexCount];
         //Set correct order
         for(int i = 0; i < visitedVertices.size(); i++){
             ans[i] = Integer.parseInt(visitedVertices.get(i).name);
         }
-
         return ans;
 
     }
