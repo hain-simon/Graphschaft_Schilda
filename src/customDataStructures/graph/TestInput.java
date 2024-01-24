@@ -2,6 +2,88 @@ package customDataStructures.graph;
 
 public class TestInput {
 
+    public static int[][] HistorischeFunde_TestGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 4, 2, 1, 0, 0},
+                {4, 0, 0, 0, 3, 0},
+                {2, 0, 0, 0, 0, 3},
+                {1, 0, 0, 0, 2, 0},
+                {0, 3, 0, 2, 0, 3},
+                {0, 0, 3, 0, 3, 0}
+        };
+        return graphArr;
+    }
+
+    public static int[][] Winterwege_TestGraph(){
+        return HistorischeFunde_TestGraph();
+    }
+
+    public int[][] Aktivitaetsdiagramm_TestGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 0, 0, 0, 0, 0},
+                {1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 1},
+                {1, 0, 0, 0, 0, 0},
+                {0, 1, 0, 1, 0, 1},
+                {0, 0, 0, 0, 0, 0}
+        };
+        return graphArr;
+    }
+
+    public int[][] Bierlieferung_TestGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 7, 0, 4, 10, 0},
+                {0, 0, 1, 0, 0, 3},
+                {0, 0, 0, 0, 0, 2},
+                {0, 0, 3, 0, 0, 7},
+                {0, 0, 0, 12, 0, 4},
+                {0, 0, 0, 0, 0, 0}
+        };
+        return graphArr;
+    }
+
+    public int[][] ProjektAufgaben_TestGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 3, 3, 3, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0, 1, 1, 1, 1, 0},
+                {0, 0, 0, 0, 0, 0, 1, 1, 1, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
+        return graphArr;
+    }
+
+    public int[][] Eiszeit_TestGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 1, 1, 0, 0, 1},
+                {1, 0, 1, 0, 1, 0},
+                {1, 1, 0, 1, 0, 0},
+                {0, 0, 1, 0, 1, 0},
+                {0, 1, 0, 1, 0, 1},
+                {1, 0, 0, 0, 1, 0}
+        };
+        return graphArr;
+    }
+
+    public int[][] Empfehlungssystem_TestGraph(){
+        int[][] graphArr = new int[][]{
+                {0, 10, 4, 0, 0, 2},
+                {10, 0, 4, 0, 3, 0},
+                {4, 4, 0, 11, 0, 0},
+                {0, 0, 11, 0, 2, 0},
+                {0, 3, 0, 2, 0, 6},
+                {2, 0, 0, 0, 6, 0}
+        };
+        return graphArr;
+    }
+
+
+
     public static int[][] getUndirectedGraph1(){
         int[][] graphArr = new int[][]{
                 {0, 10, 0, 0, 0, 15},
