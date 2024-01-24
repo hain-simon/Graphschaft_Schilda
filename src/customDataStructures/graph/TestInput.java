@@ -17,7 +17,7 @@ public class TestInput {
         return HistorischeFunde_TestGraph();
     }
 
-    public int[][] Aktivitaetsdiagramm_TestGraph(){
+    public static int[][] Aktivitaetsdiagramm_TestGraph(){
         return new int[][]{
                 {0, 0, 0, 0, 0, 0},
                 {1, 0, 0, 0, 0, 0},
@@ -28,7 +28,7 @@ public class TestInput {
         };
     }
 
-    public int[][] Bierlieferung_TestGraph(){
+    public static int[][] Bierlieferung_TestGraph(){
         return new int[][]{
                 {0, 7, 0, 4, 10, 0},
                 {0, 0, 1, 0, 0, 3},
@@ -39,7 +39,7 @@ public class TestInput {
         };
     }
 
-    public int[][] ProjektAufgaben_TestGraph(){
+    public static int[][] ProjektAufgaben_TestGraph(){
         return new int[][]{
                 {0, 3, 3, 3, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
@@ -54,7 +54,7 @@ public class TestInput {
         };
     }
 
-    public int[][] Eiszeit_TestGraph(){
+    public static int[][] Eiszeit_TestGraph(){
         return new int[][]{
                 {0, 1, 1, 0, 0, 1},
                 {1, 0, 1, 0, 1, 0},
@@ -65,7 +65,7 @@ public class TestInput {
         };
     }
 
-    public int[][] Empfehlungssystem_TestGraph(){
+    public static int[][] Empfehlungssystem_TestGraph(){
         return new int[][]{
                 {0, 10, 4, 0, 0, 2},
                 {10, 0, 4, 0, 3, 0},
