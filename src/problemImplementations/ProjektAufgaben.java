@@ -42,7 +42,7 @@ public class ProjektAufgaben {
         //Auslesen aus flowArray, welcher Mitarbeiter welches Projekt bearbeitet und speicher in zuordnung
         for(int i=0; i<mitarbeiter.size(); i++){
             for (int a=0; a<projekte.size(); a++){
-                if (flowArray[mitarbeiter.get(i+1)][projekte.get(a+1)] >0){
+                if (flowArray[mitarbeiter.get(i)][projekte.get(a)] >0){
                     zuordnung[i][a] = 1;
                 }
             }
