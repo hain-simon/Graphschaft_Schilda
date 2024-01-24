@@ -11,8 +11,9 @@ public class Main {
         //Eiszeit2.solve(TestInput.Eiszeit_TestGraph());
         //AktivitätsDiagramm.solve(TestInput.Aktivitaetsdiagramm_TestGraph());
         //ProjektAufgaben.projekteZuteilen(TestInput.ProjektAufgaben_TestGraph());
+        Empfehlungssystem.solve(TestInput.Empfehlungssystem_TestGraph(), 0, "Offen für Neues");
 
-        BierLieferung.solve(TestInput.Bierlieferung_TestGraph());
+        //BierLieferung.solve(TestInput.Bierlieferung_TestGraph());
 
         //HistorischeFunde.solve(TestInput.HistorischeFunde_TestGraph());
 

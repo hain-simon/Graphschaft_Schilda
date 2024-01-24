@@ -16,7 +16,7 @@ public class Empfehlungssystem {
      * @param input
      * @return
      */
-    public int solve(int[][] input, int num, String searchingFor){
+    public static int solve(int[][] input, int num, String searchingFor){
         int maxDist = Integer.MAX_VALUE;
         switch (searchingFor){
             case "Offen für Neues":
