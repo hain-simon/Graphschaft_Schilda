@@ -13,7 +13,8 @@ public class BierLieferung {
         Graph<Integer> graph = new Graph<>(input);
         int size = graph.vertices.size();
         Vertex<Integer> endVertex = graph.vertices.get(size-1);
-        int sum = FordFulkerson.getMaxFlow(graph, graph.vertices.get(0), endVertex).maxFlow;
+        FordFulkerson.maxFlowSolution flowSol= FordFulkerson.getMaxFlow(graph, graph.vertices.get(0), endVertex);
+        int sum = flowSol.maxFlow;
 
         //Calculate the needed flow
         int target = 0;

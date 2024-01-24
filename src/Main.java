@@ -7,12 +7,14 @@ import problemImplementations.*;
 public class Main {
     public static void main(String[] args) {
 
-        //Winterwege.solve(TestInput.getUndirectedGraph3());
+        //Winterwege.solve(TestInput.Winterwege_TestGraph());
         //Eiszeit2.solve(TestInput.Eiszeit_TestGraph());
-        //AktivitätsDiagramm.solve(TestInput.getDirectedGraph1());
-        ProjektAufgaben.projekteZuteilen(TestInput.ProjektAufgaben_TestGraph());
+        //AktivitätsDiagramm.solve(TestInput.Aktivitaetsdiagramm_TestGraph());
+        //ProjektAufgaben.projekteZuteilen(TestInput.ProjektAufgaben_TestGraph());
 
-        //HistorischeFunde.solve(TestInput.getUndirectedGraph2());
+        BierLieferung.solve(TestInput.Bierlieferung_TestGraph());
+
+        //HistorischeFunde.solve(TestInput.HistorischeFunde_TestGraph());
 
         /*
         Vertex<String> v1 = new Vertex<>("Vertex1");
