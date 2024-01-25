@@ -11,22 +11,28 @@ public class Main {
         //Eiszeit2.solve(TestInput.Eiszeit_TestGraph());
         //AktivitätsDiagramm.solve(TestInput.Aktivitaetsdiagramm_TestGraph());
         //ProjektAufgaben.projekteZuteilen(TestInput.ProjektAufgaben_TestGraph());
-        Empfehlungssystem.solve(TestInput.Empfehlungssystem_TestGraph(), 0, "Offen für Neues");
+        //Empfehlungssystem.solve(TestInput.Empfehlungssystem_TestGraph(), 0, "Offen für Neues");
 
         //BierLieferung.solve(TestInput.Bierlieferung_TestGraph());
 
         //HistorischeFunde.solve(TestInput.HistorischeFunde_TestGraph());
 
-        /*
-        Vertex<String> v1 = new Vertex<>("Vertex1");
-        Vertex<String> v2 = new Vertex<>("Vertex2");
+        Parkhaus parking = new Parkhaus(10);
+        parking.showSpaces();
+        parking.reserve();
+        parking.reserve();
+        parking.reserve();
+        parking.reserve();
+        parking.reserve(9);
+        parking.reserve();
+        parking.reserve();
+        parking.reserve();
+        parking.reserve();
+        parking.reserve();
+        parking.reserve();
+        parking.showSpaces();
+        parking.reserve();
+        parking.showSpaces();
 
-        CustomArrayList<Vertex<String>> list = new CustomArrayList<>();
-        list.add(v1);
-        list.add(v2);
-
-        System.out.println(list.get(2).name);
-
-         */
     }
 }

@@ -12,61 +12,63 @@ public class Parkhaus {
         this.size = size;
         spaceFree = new boolean[size];
         Arrays.fill(spaceFree, true);
-        bestAvailable = 0;
+        bestAvailable = 0;  //Shows the parking-space which is free and has the lowest parkingNum.
+                            // Is -1 if there is not anything free
     }
 
-    public boolean isFree(int parkingNum){
-        return spaceFree[parkingNum];
-    }
-    public void unreserve(int parkingNum){
-        spaceFree[parkingNum] = true;
-        if(bestAvailable > parkingNum){
-            bestAvailable = parkingNum;
+    //From bestAvailable, go to end of parkingArr. If it finds a free Parking Space, set bestAvailable to this and
+    // return the previous best
+    private int reserveSmallest(){
+        int parkingNum = bestAvailable;
+        if(bestAvailable == -1){
+            System.out.println("No Parking Space left!");
+            return -1;
+        }
+        else {
+            spaceFree[parkingNum] = false;
+            System.out.println("Reserved Parking Space: " + parkingNum);
+            findNextBest();
+            return parkingNum;
         }
     }
-    public int reserve(int parkingNum) throws Exception {
-        //This method returns the parking Number that was reserved. If the Parking Lot is full, it throws an Exception
-        checkIndex(parkingNum);
 
-        //If bestAvailable >= size (no free Space) throw Exception
-        if(bestAvailable >= size) throw new Exception("No free Space left!");
-
-        //If we try to reserve a bigger Num than bestAvailable, check this, otherwise reserve bestAvailable
-        if(parkingNum > bestAvailable) {
-            if (spaceFree[parkingNum]) {
-                spaceFree[parkingNum] = false;
-                return parkingNum;
-            }
-        }
-
-        //Otherwise reserveBestAvailable
-        return reserveBest();
-
-    }
-
-    private int reserveBest(){
-        spaceFree[bestAvailable] = false;
-        int reservedNum = bestAvailable;
-        setNextBest();
-        return reservedNum;
-    }
-
-    private void setNextBest(){
-        for(int i = bestAvailable; i < size; i++){
-            //If we find a free Space, set bestAvailable
-            if(spaceFree[i]){
+    private void findNextBest(){
+        for (int i = bestAvailable + 1; i < spaceFree.length; i++) {
+            if (spaceFree[i]) {
                 bestAvailable = i;
+                System.out.println("Next best is: " + bestAvailable);
                 return;
             }
         }
-        //Otherwise set to size
-        bestAvailable = size;
+        bestAvailable = -1;
+        System.out.println("Parking full!");
     }
 
-
-    private void checkIndex(int index){
-        if(index < 0 || index >= size){
-            throw new IndexOutOfBoundsException("Index " + index + " is out of Bounds!");
+    public int reserve(int num){
+        if(num > bestAvailable && spaceFree[num]){ //If desired num is free, reserve that
+            spaceFree[num] = false;
+            System.out.println("Reserved desired Parking Space: " + num);
+            return num;
         }
+        return reserveSmallest(); //If num was not free, reserveSmallest
     }
+
+    public int reserve(){
+        return reserveSmallest();
+    }
+
+    public void unreserve(int num){
+        spaceFree[num] = true;
+        System.out.println("Unreserved Parking Space Num: " + num);
+        if(num < bestAvailable) bestAvailable = num;
+    }
+
+    public void showSpaces(){
+        System.out.println("Spaces: ");
+        for(int i = 0; i < spaceFree.length; i++){
+            System.out.printf("%b, ", spaceFree[i]);
+        }
+        System.out.printf("\n");
+    }
+
 }
