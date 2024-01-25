@@ -22,7 +22,7 @@ public class BierLieferung {
             target += edge.connectionWeight;
         }
         printGraph(flowSol);
-        System.out.println("Flow is: " + sum + ", target was: " + target);
+        System.out.println("Flow is: " + sum + ", bars need: " + target);
         return flowSol.flowGraph;
     }
 
