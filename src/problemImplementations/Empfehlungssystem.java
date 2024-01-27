@@ -1,7 +1,7 @@
 package problemImplementations;
 
 import customDataStructures.CustomArrayList;
-import customDataStructures.Djikstra;
+import customDataStructures.Dijkstra;
 import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 
@@ -34,7 +34,7 @@ public class Empfehlungssystem {
         }
 
         Graph<Integer> graph = new Graph<>(input);
-        CustomArrayList<Vertex<Integer>> list = Djikstra.getDistances(graph, graph.vertices.get(num));
+        CustomArrayList<Vertex<Integer>> list = Dijkstra.getDistances(graph, graph.vertices.get(num));
 
         CustomArrayList<Integer> possibleLocations = new CustomArrayList<>();
 

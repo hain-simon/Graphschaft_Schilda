@@ -5,7 +5,7 @@ import customDataStructures.graph.Graph;
 import customDataStructures.graph.Vertex;
 
 
-public class Djikstra {
+public class Dijkstra {
 
     public static CustomArrayList<Vertex<Integer>> getDistances(Graph<Integer> graph, Vertex<Integer> startVertex){
         CustomArrayList<Vertex<Integer>> vertices = graph.vertices;
