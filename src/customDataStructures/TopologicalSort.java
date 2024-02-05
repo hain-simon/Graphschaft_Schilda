@@ -17,8 +17,15 @@ public class TopologicalSort {
         //Add every vertex to verticesWithoutPermanentMark
         verticesWithoutPermanentMark.addAll(vertices);
 
-        while(!verticesWithoutPermanentMark.isEmpty()){
-            Vertex<Integer> vertex = verticesWithoutPermanentMark.get(0);
+        CustomArrayList<Vertex<Integer>> startVertices = new CustomArrayList<>();
+
+        for(Vertex<Integer> vertex : graph.vertices){
+            if(vertex.edgesIn.size == 0) startVertices.add(vertex);
+        }
+
+        while(!startVertices.isEmpty()){
+            Vertex<Integer> vertex = startVertices.get(0);
+            startVertices.remove(vertex);
             visit(vertex);
         }
         int[] ans = new int[vertexCount];
