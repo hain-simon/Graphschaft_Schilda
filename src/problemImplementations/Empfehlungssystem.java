@@ -47,7 +47,7 @@ public class Empfehlungssystem {
         Random random = new Random();
         int locationNum = random.nextInt(numOfLocations);
 
-        System.out.println("You should visit Location Num: " + locationNum);
+        System.out.println("You should visit Location Num: " + possibleLocations.get(locationNum));
         return locationNum;
 
 
